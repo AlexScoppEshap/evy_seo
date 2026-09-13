@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 
@@ -122,6 +121,16 @@ export default async function EventPage({
     ? getDomain(event.ticketing_url)
     : undefined
   const priceLabel = formatPrice(event.price, event.currency_code)
+  const canonicalUrl = `https://myevy.app/events/${event.seo_slug ?? slug}`
+  const appEventUrl = `https://app.myevy.app/event/${event.id}`
+  const commentsCount = 0
+  const hasSocialActivity =
+    (event.likescount ?? 0) > 0 ||
+    (event.participantscount ?? 0) > 0 ||
+    commentsCount > 0
+  const shareUrl = `mailto:?subject=${encodeURIComponent(
+    title,
+  )}&body=${encodeURIComponent(canonicalUrl)}`
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -165,7 +174,7 @@ export default async function EventPage({
 
   return (
     <main
-      className="min-h-screen bg-[#F7F7F9] pb-28 text-[#18171B]"
+      className="min-h-screen bg-[#F7F7F9] pb-36 text-[#18171B] sm:pb-12"
       style={{ colorScheme: 'light' }}
     >
       <script
@@ -175,20 +184,27 @@ export default async function EventPage({
 
       <section className="relative mx-auto max-w-3xl overflow-hidden bg-[#111] sm:mt-6 sm:rounded-[24px] sm:shadow-[0_18px_50px_-30px_rgba(20,18,24,0.65)]">
         <div className="absolute left-0 right-0 top-0 z-20 flex items-center justify-between px-4 pt-4">
-          <Link
-            href="/"
-            aria-label="Back to events"
-            className="grid h-10 w-10 place-items-center rounded-full bg-black/25 text-white ring-1 ring-white/25 backdrop-blur"
+          <a
+            href={appEventUrl}
+            aria-label="Open this event in Evy"
+            className="block drop-shadow-[0_8px_18px_rgba(0,0,0,0.32)]"
           >
-            <ChevronLeftIcon />
-          </Link>
+            <Image
+              src="/logo.svg"
+              alt=""
+              width={176}
+              height={184}
+              className="h-28 w-auto"
+            />
+          </a>
           <div className="flex gap-2">
-            <button
+            <a
+              href={shareUrl}
               aria-label="Share event"
               className="grid h-10 w-10 place-items-center rounded-full bg-black/25 text-white ring-1 ring-white/25 backdrop-blur"
             >
               <ShareIcon />
-            </button>
+            </a>
             <button
               aria-label="More actions"
               className="grid h-10 w-10 place-items-center rounded-full bg-black/25 text-white ring-1 ring-white/25 backdrop-blur"
@@ -268,16 +284,27 @@ export default async function EventPage({
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-1 pb-2">
-          <Stat icon={<HeartIcon />} value={event.likescount ?? 0} label="Likes" />
-          <Stat
-            icon={<GroupIcon />}
-            value={event.participantscount ?? 0}
-            label="Going"
-          />
-          <Stat icon={<CommentIcon />} value="0" label="Comments" />
-          <Stat icon={<ShareSmallIcon />} value="" label="Share" />
-        </div>
+        {hasSocialActivity && (
+          <div className="grid grid-cols-4 gap-1 pb-2">
+            <Stat
+              icon={<HeartIcon />}
+              value={event.likescount ?? 0}
+              label="Likes"
+            />
+            <Stat
+              icon={<GroupIcon />}
+              value={event.participantscount ?? 0}
+              label="Going"
+            />
+            <Stat icon={<CommentIcon />} value={commentsCount} label="Comments" />
+            <Stat
+              icon={<ShareSmallIcon />}
+              value=""
+              label="Share"
+              href={shareUrl}
+            />
+          </div>
+        )}
 
         <div className="mt-2 rounded-[18px] bg-white px-3.5 py-3 shadow-[0_8px_18px_-4px_rgba(0,0,0,0.10)]">
           <InfoRow icon={<ClockIcon />}>
@@ -300,6 +327,32 @@ export default async function EventPage({
           <Chip emphasized>{category}</Chip>
           {event.city && <Chip>{event.city}</Chip>}
           {hasEnded && <StateBadge>Past event</StateBadge>}
+        </div>
+
+        <div className="mt-5 hidden rounded-[18px] bg-white p-3 shadow-[0_8px_18px_-8px_rgba(0,0,0,0.12)] sm:flex sm:items-center sm:justify-between sm:gap-4">
+          <div className="flex min-w-0 items-center gap-3">
+            <Image
+              src="/favicon.svg"
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 shrink-0"
+            />
+            <div className="min-w-0">
+              <p className="font-black text-[#18171B]">Open this event in Evy</p>
+              <p className="truncate text-sm font-semibold text-[#626068]">
+                Save, share, and join the vibe in the app.
+              </p>
+            </div>
+          </div>
+          <a
+            href={appEventUrl}
+            className="inline-flex h-[44px] shrink-0 items-center gap-2 rounded-2xl px-4 text-sm font-black text-white shadow-[0_8px_20px_rgba(124,58,237,0.30)]"
+            style={{ background: brandGradient }}
+          >
+            <Image src="/favicon.svg" alt="" width={18} height={18} />
+            Open in Evy
+          </a>
         </div>
 
         <section className="mt-6">
@@ -340,15 +393,29 @@ export default async function EventPage({
             </p>
           </section>
         )}
+
+        <footer className="mt-10 border-t border-black/10 py-7 text-center">
+          <Image
+            src="/logo.svg"
+            alt="Evy"
+            width={92}
+            height={96}
+            className="mx-auto h-14 w-auto"
+          />
+          <p className="mt-2 text-sm font-semibold text-[#626068]">
+            Discover events with Evy — Find your vibe
+          </p>
+        </footer>
       </section>
 
       <div className="fixed inset-x-0 bottom-0 z-30 bg-[#F7F7F9] px-4 pb-[max(14px,env(safe-area-inset-bottom))] pt-2.5 sm:hidden">
         <a
-          href={event.ticketing_url || '#'}
-          className="block rounded-2xl px-4 py-3.5 text-center font-black text-white shadow-[0_8px_20px_rgba(124,58,237,0.35)]"
-          style={{ background: hasEnded ? '#C8C5CE' : brandGradient }}
+          href={appEventUrl}
+          className="flex items-center justify-center gap-2 rounded-2xl px-4 py-3.5 text-center font-black text-white shadow-[0_8px_20px_rgba(124,58,237,0.35)]"
+          style={{ background: brandGradient }}
         >
-          {hasEnded ? 'Event ended' : "I'm participating"}
+          <Image src="/favicon.svg" alt="" width={20} height={20} />
+          Open in Evy
         </a>
       </div>
     </main>
@@ -359,13 +426,15 @@ function Stat({
   icon,
   value,
   label,
+  href,
 }: {
   icon: React.ReactNode
   value: number | string
   label: string
+  href?: string
 }) {
-  return (
-    <div className="rounded-[14px] py-1.5 text-center">
+  const content = (
+    <>
       <div className="flex items-center justify-center gap-1 text-[#77747D]">
         {icon}
         {value !== '' && (
@@ -375,8 +444,18 @@ function Stat({
       <div className="mt-0.5 truncate text-xs font-semibold text-[#626068]">
         {label}
       </div>
-    </div>
+    </>
   )
+
+  if (href) {
+    return (
+      <a href={href} className="rounded-[14px] py-1.5 text-center">
+        {content}
+      </a>
+    )
+  }
+
+  return <div className="rounded-[14px] py-1.5 text-center">{content}</div>
 }
 
 function InfoRow({
@@ -517,14 +596,6 @@ function IconBase({ children }: { children: React.ReactNode }) {
     >
       {children}
     </svg>
-  )
-}
-
-function ChevronLeftIcon() {
-  return (
-    <IconBase>
-      <path d="m15 18-6-6 6-6" />
-    </IconBase>
   )
 }
 
