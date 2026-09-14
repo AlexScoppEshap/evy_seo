@@ -27,6 +27,8 @@ type EventRecord = {
 
 const accent = '#7C3AED'
 const brandGradient = 'linear-gradient(90deg, #4D24F8 0%, #DE5EF5 100%)'
+const evyLogoUrl = 'https://seo.myevy.app/logo.svg'
+const evyFaviconUrl = 'https://seo.myevy.app/favicon.svg'
 
 export async function generateMetadata({
   params,
@@ -190,7 +192,7 @@ export default async function EventPage({
             className="block drop-shadow-[0_8px_18px_rgba(0,0,0,0.32)]"
           >
             <Image
-              src="/logo.svg"
+              src={evyLogoUrl}
               alt=""
               width={176}
               height={184}
@@ -332,7 +334,7 @@ export default async function EventPage({
         <div className="mt-5 hidden rounded-[18px] bg-white p-3 shadow-[0_8px_18px_-8px_rgba(0,0,0,0.12)] sm:flex sm:items-center sm:justify-between sm:gap-4">
           <div className="flex min-w-0 items-center gap-3">
             <Image
-              src="/favicon.svg"
+              src={evyFaviconUrl}
               alt=""
               width={36}
               height={36}
@@ -350,7 +352,7 @@ export default async function EventPage({
             className="inline-flex h-[44px] shrink-0 items-center gap-2 rounded-2xl px-4 text-sm font-black text-white shadow-[0_8px_20px_rgba(124,58,237,0.30)]"
             style={{ background: brandGradient }}
           >
-            <Image src="/favicon.svg" alt="" width={18} height={18} />
+            <Image src={evyFaviconUrl} alt="" width={18} height={18} />
             Open in Evy
           </a>
         </div>
@@ -365,22 +367,28 @@ export default async function EventPage({
               >
                 {event.price === null ? priceLabel : `From ${priceLabel}`}
               </p>
-              {ticketDomain && (
+              {!hasEnded && ticketDomain && (
                 <p className="truncate text-sm font-semibold text-[#929099]">
                   {ticketDomain}
                 </p>
               )}
             </div>
-            {event.ticketing_url && (
-              <a
-                href={event.ticketing_url}
-                rel="noreferrer"
-                target="_blank"
-                className="inline-flex h-[42px] shrink-0 items-center gap-1.5 rounded-[15px] bg-[#7C3AED] px-3.5 text-sm font-bold text-white shadow-[0_7px_16px_rgba(124,58,237,0.30)]"
-              >
-                <OpenIcon />
-                Tickets
-              </a>
+            {hasEnded ? (
+              <span className="inline-flex h-[42px] shrink-0 items-center rounded-[15px] bg-[#ECEAF0] px-3.5 text-sm font-bold text-[#626068]">
+                Événement terminé
+              </span>
+            ) : (
+              event.ticketing_url && (
+                <a
+                  href={event.ticketing_url}
+                  rel="noreferrer"
+                  target="_blank"
+                  className="inline-flex h-[42px] shrink-0 items-center gap-1.5 rounded-[15px] bg-[#7C3AED] px-3.5 text-sm font-bold text-white shadow-[0_7px_16px_rgba(124,58,237,0.30)]"
+                >
+                  <OpenIcon />
+                  Tickets
+                </a>
+              )
             )}
           </div>
         </section>
@@ -396,7 +404,7 @@ export default async function EventPage({
 
         <footer className="mt-10 border-t border-black/10 py-7 text-center">
           <Image
-            src="/logo.svg"
+            src={evyLogoUrl}
             alt="Evy"
             width={92}
             height={96}
@@ -414,7 +422,7 @@ export default async function EventPage({
           className="flex items-center justify-center gap-2 rounded-2xl px-4 py-3.5 text-center font-black text-white shadow-[0_8px_20px_rgba(124,58,237,0.35)]"
           style={{ background: brandGradient }}
         >
-          <Image src="/favicon.svg" alt="" width={20} height={20} />
+          <Image src={evyFaviconUrl} alt="" width={20} height={20} />
           Open in Evy
         </a>
       </div>
