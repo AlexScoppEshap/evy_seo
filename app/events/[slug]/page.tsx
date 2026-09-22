@@ -1,5 +1,11 @@
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
+import {
+  buildEventJsonLd,
+  serializeJsonLd,
+  type EventCreatorRecord,
+  type EventTicketTypeRecord,
+} from '@/lib/event-json-ld'
 import { supabase } from '@/lib/supabase'
 
 type EventRecord = {
@@ -13,6 +19,7 @@ type EventRecord = {
   npa: string | null
   city: string | null
   country_code: string | null
+  region_code: string | null
   timezone: string | null
   start_date: string | null
   end_date: string | null
@@ -23,6 +30,12 @@ type EventRecord = {
   likescount: number | null
   participantscount: number | null
   external_organizer_name: string | null
+  artists: string[] | null
+  creator_id: string | null
+  users: EventCreatorRecord | null
+  event_ticket_types: EventTicketTypeRecord[] | null
+  status: string | null
+  previous_start_at: string | null
 }
 
 const accent = '#7C3AED'
@@ -86,6 +99,7 @@ export default async function EventPage({
         npa,
         city,
         country_code,
+        region_code,
         timezone,
         start_date,
         end_date,
@@ -95,7 +109,13 @@ export default async function EventPage({
         seo_slug,
         likescount,
         participantscount,
-        external_organizer_name
+        external_organizer_name,
+        artists,
+        creator_id,
+        status,
+        previous_start_at,
+        users ( fullname, username ),
+        event_ticket_types ( name, price, currency, sort_order )
       `,
     )
     .eq('seo_slug', slug)
@@ -134,45 +154,7 @@ export default async function EventPage({
     title,
   )}&body=${encodeURIComponent(canonicalUrl)}`
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: title,
-    description: event.description || undefined,
-    startDate: event.start_date || undefined,
-    endDate: event.end_date || undefined,
-    image:
-      event.image_url && !event.image_url.includes('token=')
-        ? [event.image_url]
-        : undefined,
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    eventStatus: hasEnded
-      ? 'https://schema.org/EventCompleted'
-      : 'https://schema.org/EventScheduled',
-    location: {
-      '@type': 'Place',
-      name: venue || event.city || title,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: event.address || undefined,
-        postalCode: event.npa || undefined,
-        addressLocality: event.city || undefined,
-        addressCountry: event.country_code || undefined,
-      },
-    },
-    offers:
-      event.price !== null
-        ? {
-            '@type': 'Offer',
-            price: event.price,
-            priceCurrency: event.currency_code || undefined,
-            url: event.ticketing_url || undefined,
-            availability: hasEnded
-              ? 'https://schema.org/SoldOut'
-              : 'https://schema.org/InStock',
-          }
-        : undefined,
-  }
+  const jsonLd = buildEventJsonLd(event)
 
   return (
     <main
@@ -181,7 +163,7 @@ export default async function EventPage({
     >
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <section className="relative mx-auto max-w-3xl overflow-hidden bg-[#111] sm:mt-6 sm:rounded-[24px] sm:shadow-[0_18px_50px_-30px_rgba(20,18,24,0.65)]">
