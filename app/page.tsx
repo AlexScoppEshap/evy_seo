@@ -1,26 +1,21 @@
-import { supabase } from '@/lib/supabase'
+import type { Metadata } from 'next'
+import { PUBLIC_ORIGIN } from '@/lib/event-seo'
 
-export default async function Home() {
-  const { data, error } = await supabase
-    .from('events')
-    .select('id, name, city, seo_slug')
-    .limit(5)
+// The canonical homepage belongs to WordPress. This origin landing must never
+// read event data, disclose diagnostics or redirect back through an unknown proxy.
+export const metadata: Metadata = {
+  title: 'Evy',
+  description: 'Discover events with Evy.',
+  robots: { index: false, follow: true },
+  alternates: { canonical: `${PUBLIC_ORIGIN}/` },
+}
 
-  if (error) {
-    return <pre>{error.message}</pre>
-  }
-
+export default function Home() {
   return (
-    <main style={{ padding: 40 }}>
-      <h1>Evy SEO test</h1>
-
-      {data?.map((event) => (
-        <div key={event.id} style={{ marginBottom: 20 }}>
-          <strong>{event.name}</strong>
-          <div>{event.city}</div>
-          <div>{event.seo_slug}</div>
-        </div>
-      ))}
+    <main className="mx-auto flex min-h-screen max-w-xl flex-col justify-center gap-4 p-8">
+      <h1 className="text-3xl font-bold">Evy</h1>
+      <p>Discover events and find your vibe.</p>
+      <a href={PUBLIC_ORIGIN} className="font-semibold underline">Visit Evy</a>
     </main>
   )
 }

@@ -1,3 +1,6 @@
+import { isoInstant, occurrenceStatus, publicHttpsUrl, publicImageUrl } from './event-seo.ts'
+import { eventCurrency, eventPricing } from './event-presentation.ts'
+
 export const EVY_SWITZERLAND_CREATOR_ID =
   '3b271647-4f96-4a95-b788-f6de233d0bba'
 
@@ -11,9 +14,12 @@ export type EventTicketTypeRecord = {
 export type EventCreatorRecord = {
   fullname: string | null
   username: string | null
+  profileimageurl?: string | null
+  account_status?: string | null
 }
 
 export type StructuredDataEvent = {
+  event_type?: string | null
   name: string | null
   description: string | null
   image_url: string | null
@@ -51,7 +57,7 @@ function cleanText(value: string | null | undefined) {
   return cleaned || undefined
 }
 
-function creatorDisplayName(event: StructuredDataEvent) {
+export function creatorDisplayName(event: StructuredDataEvent) {
   const externalName = cleanText(event.external_organizer_name)
   if (
     event.creator_id?.trim() === EVY_SWITZERLAND_CREATOR_ID &&
@@ -63,58 +69,20 @@ function creatorDisplayName(event: StructuredDataEvent) {
   return cleanText(event.users?.fullname) ?? cleanText(event.users?.username)
 }
 
-function eventStatus(event: StructuredDataEvent) {
-  if (event.status === 'cancelled') {
-    return 'https://schema.org/EventCancelled'
-  }
-  if (event.status === 'postponed') {
-    const previousStart = cleanText(event.previous_start_at)
-    const currentStart = cleanText(event.start_date)
-    if (previousStart && currentStart && previousStart !== currentStart) {
-      return 'https://schema.org/EventRescheduled'
-    }
-    return 'https://schema.org/EventPostponed'
-  }
-  return 'https://schema.org/EventScheduled'
-}
-
 function ticketOffers(event: StructuredDataEvent): JsonLdObject[] | undefined {
-  const fallbackCurrency = cleanText(event.currency_code)?.toUpperCase()
-  const fallbackUrl = cleanText(event.ticketing_url)
-  const offers = (event.event_ticket_types ?? [])
-    .map((ticket, index) => ({ ticket, index }))
-    .sort(
-      (a, b) =>
-        (a.ticket.sort_order ?? 0) - (b.ticket.sort_order ?? 0) ||
-        a.index - b.index,
-    )
-    .flatMap(({ ticket }) => {
-      const name = cleanText(ticket.name)
-      const parsedPrice =
-        typeof ticket.price === 'number'
-          ? ticket.price
-          : Number(ticket.price?.trim().replace(',', '.'))
-      const currency =
-        cleanText(ticket.currency)?.toUpperCase() ?? fallbackCurrency
-
-      if (!name || !Number.isFinite(parsedPrice) || parsedPrice < 0 || !currency) {
-        return []
-      }
-
-      return [
-        {
-          '@type': 'Offer',
-          name,
-          price: parsedPrice,
-          priceCurrency: currency,
-          url: fallbackUrl,
-          availability: 'https://schema.org/InStock',
-        },
-      ]
-    })
+  // Meetup costs are informational; the app never treats them as ticket offers.
+  if (event.event_type === 'meetup') return undefined
+  const fallbackCurrency = eventCurrency(event)
+  const pricing = eventPricing(event)
+  const fallbackUrl = event.status !== 'cancelled' ? pricing.bookingUrl : undefined
+  const offers = pricing.tickets.map(ticket => ({
+    '@type': 'Offer', name: ticket.name, price: ticket.price,
+    priceCurrency: ticket.currency, url: fallbackUrl,
+  }))
 
   if (offers.length > 0) return offers
-  if (event.price === null || !Number.isFinite(event.price) || event.price < 0) {
+  if (event.event_ticket_types?.length) return undefined
+  if (event.price === null || !Number.isFinite(event.price) || event.price < 0 || !fallbackCurrency) {
     return undefined
   }
 
@@ -124,12 +92,11 @@ function ticketOffers(event: StructuredDataEvent): JsonLdObject[] | undefined {
       price: event.price,
       priceCurrency: fallbackCurrency,
       url: fallbackUrl,
-      availability: 'https://schema.org/InStock',
     },
   ]
 }
 
-export function buildEventJsonLd(event: StructuredDataEvent): JsonLdObject {
+export function buildEventJsonLd(event: StructuredDataEvent, canonicalUrl?: string): JsonLdObject {
   const title = cleanText(event.name) ?? 'Untitled event'
   const venue = cleanText(event.venue_name)
   const performers = (event.artists ?? [])
@@ -137,28 +104,29 @@ export function buildEventJsonLd(event: StructuredDataEvent): JsonLdObject {
     .filter(Boolean)
     .map((name) => ({ '@type': 'Person', name }))
   const organizerName = creatorDisplayName(event)
-  const status = eventStatus(event)
+  const status = `https://schema.org/${occurrenceStatus(event).schema}`
 
   return {
     '@context': 'https://schema.org',
     '@type': 'Event',
+    url: publicHttpsUrl(canonicalUrl),
     name: title,
     description: cleanText(event.description),
-    startDate: cleanText(event.start_date),
-    endDate: cleanText(event.end_date),
+    startDate: isoInstant(event.start_date),
+    endDate: isoInstant(event.end_date),
     image:
-      event.image_url && !event.image_url.includes('token=')
-        ? [event.image_url]
+      publicImageUrl(event.image_url)
+        ? [publicImageUrl(event.image_url)!]
         : undefined,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: status,
     previousStartDate:
       status === 'https://schema.org/EventRescheduled'
-        ? cleanText(event.previous_start_at)
+        ? isoInstant(event.previous_start_at)
         : undefined,
-    location: {
+    location: [venue, event.address, event.city, event.country_code].some(cleanText) ? {
       '@type': 'Place',
-      name: venue ?? cleanText(event.city) ?? title,
+      name: venue ?? cleanText(event.city),
       address: {
         '@type': 'PostalAddress',
         streetAddress: cleanText(event.address),
@@ -167,7 +135,7 @@ export function buildEventJsonLd(event: StructuredDataEvent): JsonLdObject {
         addressRegion: cleanText(event.region_code),
         addressCountry: cleanText(event.country_code),
       },
-    },
+    } : undefined,
     performer: performers.length > 0 ? performers : undefined,
     organizer: organizerName
       ? { '@type': 'Organization', name: organizerName }
@@ -177,5 +145,5 @@ export function buildEventJsonLd(event: StructuredDataEvent): JsonLdObject {
 }
 
 export function serializeJsonLd(value: JsonLdObject) {
-  return JSON.stringify(value).replace(/</g, '\\u003c')
+  return JSON.stringify(value).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029')
 }

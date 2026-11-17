@@ -46,7 +46,6 @@ test('creates ordered offers from valid ticket types and ignores the legacy pric
       price: 25,
       priceCurrency: 'CHF',
       url: baseEvent.ticketing_url,
-      availability: 'https://schema.org/InStock',
     },
     {
       '@type': 'Offer',
@@ -54,7 +53,6 @@ test('creates ordered offers from valid ticket types and ignores the legacy pric
       price: 80,
       priceCurrency: 'CHF',
       url: baseEvent.ticketing_url,
-      availability: 'https://schema.org/InStock',
     },
   ])
 })
@@ -107,5 +105,5 @@ test('maps cancelled, postponed, and genuinely rescheduled events', () => {
     previous_start_at: '2026-10-17T18:00:00Z',
   })
   assert.equal(rescheduled.eventStatus, 'https://schema.org/EventRescheduled')
-  assert.equal(rescheduled.previousStartDate, '2026-10-17T18:00:00Z')
+  assert.equal(rescheduled.previousStartDate, '2026-10-17T18:00:00.000Z')
 })

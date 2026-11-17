@@ -1,0 +1,19 @@
+{
+  "observed_date": "2026-11-17",
+  "project": "evy-seo",
+  "framework": "nextjs",
+  "nodeVersion": "24.x",
+  "github": {
+    "type": "github",
+    "org": "AlexScoppEshap",
+    "repo": "evy_seo",
+    "productionBranch": "main"
+  },
+  "gitProviderOptions": {
+    "createDeployments": "enabled"
+  },
+  "commandForIgnoringBuildStep": null,
+  "buildCommand": null,
+  "installCommand": null,
+  "rootDirectory": null
+}

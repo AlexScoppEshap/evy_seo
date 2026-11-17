@@ -1,0 +1,466 @@
+{
+  "deployment": "dpl_7zeHSV3B4wvzB4kWtNhERzgXdikF",
+  "verified_date": "2026-11-17",
+  "files": [
+    {
+      "path": ".vercelignore",
+      "sha1": "e9a38cb7c360f4ede593cbf67a1d1cd99a04ca45",
+      "sha256": "30dc7dd7e81e67afda6d8bdb198df5c8fe66a166252cff2a93764b6906da69ae"
+    },
+    {
+      "path": "app/assets/maptiler-logo.svg",
+      "sha1": "80309d0bc00db3ce2ea21af61d69c66afaef71d3",
+      "sha256": "c2fef38a1e77e9ff774dc1b21a2e931c81eab12191395be726c594404e4bf332"
+    },
+    {
+      "path": "app/assets/meetups/culture_activities-1.webp",
+      "sha1": "ad3218d2a8e26398873b93acf21de4c65119f231",
+      "sha256": "66f6ed97f634f03731ce424a7d6c73900eb32db58f4d56340244ddd60e3ecdf7"
+    },
+    {
+      "path": "app/assets/meetups/culture_activities-2.webp",
+      "sha1": "ecb5a4ae974dd7a911991eef56a91508b10b2a22",
+      "sha256": "5da85f40d71852b75a6a00ba4a2677f4b778104244caf5caf2eed2d4a273b217"
+    },
+    {
+      "path": "app/assets/meetups/culture_activities-3.webp",
+      "sha1": "404dfa7f3bb1d1acd289ce40a34831699e599555",
+      "sha256": "e51d8e2f76400db4fe855009b68c9b3acd3d3cc4e21a6fbf57b078ca5c7b90de"
+    },
+    {
+      "path": "app/assets/meetups/culture_activities-4.webp",
+      "sha1": "67c8f9e80878288e1fe8c4a3892af0d61e4389f3",
+      "sha256": "ca583387bded703922c5e5f34f3b48fcde90ddae2db5e32b425a7166ce93e732"
+    },
+    {
+      "path": "app/assets/meetups/culture_activities-5.webp",
+      "sha1": "56732a5ba48e2a59135825792b62a793baa787f8",
+      "sha256": "2d66d5aa2ddbbe1acf8844505996c9f49ee87d5df4ec559e446a7d149bb080d3"
+    },
+    {
+      "path": "app/assets/meetups/drinks_nightlife-1.webp",
+      "sha1": "9db2fce07bf8210bef82d22385f2ebfd930e0d47",
+      "sha256": "339257b284b9d85edc4a54cc6a94f993d8084fd57c1ffd2b0d59cf376f321a7d"
+    },
+    {
+      "path": "app/assets/meetups/drinks_nightlife-2.webp",
+      "sha1": "f54036ed6f3b8db762611ce3fd2c3590dc6235f7",
+      "sha256": "8b38d9bf953168ee4a89bdf5dc187475d9217d2d9d8320e7fb761ab66d6dc695"
+    },
+    {
+      "path": "app/assets/meetups/drinks_nightlife-3.webp",
+      "sha1": "fcf66bee289f395a1007565172fb3ff1e7eab6ff",
+      "sha256": "faf7b469bb462f34de2eee2e234740f584343be53f10ca6a1e1d188ace403e94"
+    },
+    {
+      "path": "app/assets/meetups/drinks_nightlife-4.webp",
+      "sha1": "f1a9171c49317154267e8aa00543a3be95f242a9",
+      "sha256": "3363fdf1874e76a779b6db4b01c56d20e560c71919917bc8fc12b93fca408515"
+    },
+    {
+      "path": "app/assets/meetups/drinks_nightlife-5.webp",
+      "sha1": "11ec5f1680d4998d5ba21d72eff0f04d40f7687c",
+      "sha256": "63ec9b2768847071634868f6947058bada07bd487d1593514a63dcad73228ad8"
+    },
+    {
+      "path": "app/assets/meetups/games_gaming-1.webp",
+      "sha1": "f28ffc4ede4040520975cb4a58982a04bc7e567e",
+      "sha256": "db48d443c124796676b86a567dedadc66c75501fef0c513e13d51c34be2c18f5"
+    },
+    {
+      "path": "app/assets/meetups/games_gaming-2.webp",
+      "sha1": "9e718803d32f36933f068d4a78a640bb92095cdd",
+      "sha256": "8111f4bb86da74bd94de3fc261857e16d05d6e538e69206fa29873ef3093606b"
+    },
+    {
+      "path": "app/assets/meetups/games_gaming-3.webp",
+      "sha1": "ed9c72cd8d4eddb5dfe531cdfb7e335f8fdf6ec8",
+      "sha256": "72c2e0309ce834ea7ae4dfca2e416fccd881a940d33cb08fdfbe1f136bd35922"
+    },
+    {
+      "path": "app/assets/meetups/games_gaming-4.webp",
+      "sha1": "f4a2eed2ce2dd161b66d5d09ca553599a5286937",
+      "sha256": "dba4c116c0656dba59ffef5dd5555fdf6c9175f3006d5738d743f625e417dd77"
+    },
+    {
+      "path": "app/assets/meetups/games_gaming-5.webp",
+      "sha1": "7f054ebaaf405efad7a19e2c389c5edd0b5957fa",
+      "sha256": "aa895fbbe871ffb4c5f843aafe2c9b28d47755d2afa5e4558e4025de77840ea7"
+    },
+    {
+      "path": "app/assets/meetups/networking-1.webp",
+      "sha1": "fec7502173dd50083dc56c0c121cbda60323aa8d",
+      "sha256": "7f9b7e8284c12d4ca1a498bc540f40fa6deca3762868f31c5393dd37aad947b2"
+    },
+    {
+      "path": "app/assets/meetups/networking-2.webp",
+      "sha1": "66072bd018c879acd0ed6adb7d1e32b4b07d0548",
+      "sha256": "8190a6a28e3ff4e9bffe05a11a0d8ccfb7ba3f54879ec9ab2a911fc70c46e6ad"
+    },
+    {
+      "path": "app/assets/meetups/networking-3.webp",
+      "sha1": "12ece38246439d60932e8ae3f888ab52a09113aa",
+      "sha256": "716cd395f02a7366b097e4336e6a847ab5c5c25e64c3c8fd5fa159e7d0a63bf5"
+    },
+    {
+      "path": "app/assets/meetups/networking-4.webp",
+      "sha1": "66e0469f213d864cc6bb79786bc306513d3176d9",
+      "sha256": "dbfe98cb7ee6c6d68ccde97e17a5fe54b04f1c092bf73cb3b3ec9795729d557b"
+    },
+    {
+      "path": "app/assets/meetups/networking-5.webp",
+      "sha1": "e65bc2de2e705d5511af15c459689054973c6961",
+      "sha256": "64936bdf9d91d38799cffd8cdbe49291b34404a61934850545ac9848a55e83eb"
+    },
+    {
+      "path": "app/assets/meetups/other-1.webp",
+      "sha1": "f619ab6a8d0326888807f64ad86ab53f6d7d99da",
+      "sha256": "cbeab764d47ff78a2923fef5fe02c2afe09f27da90aba6fe0248ce4139e34c6e"
+    },
+    {
+      "path": "app/assets/meetups/other-2.webp",
+      "sha1": "7b7fb769dade17a1d53c2a78d21332d9356ee994",
+      "sha256": "cdad1ab7384e3b290cbb99dd89fcde33f2393469512c905b97c93840eda21341"
+    },
+    {
+      "path": "app/assets/meetups/other-3.webp",
+      "sha1": "f1d50d9c4b5c0919ceb74074ffe4e01e020a0073",
+      "sha256": "bae6835ba5ef3a33160029b8bef9f19613d0f84c5d475ff7a6ee42a0bffbe9c0"
+    },
+    {
+      "path": "app/assets/meetups/other-4.webp",
+      "sha1": "8fa43ada86515e5740f9bd70cf8de0ea31827f4a",
+      "sha256": "60f96409a540bbc770716f2b120326b1c16fe35a78259250852ec9f445ebfd87"
+    },
+    {
+      "path": "app/assets/meetups/other-5.webp",
+      "sha1": "4c5e00277598f8231c52a1d242e40c43bb31766b",
+      "sha256": "5c0fc37b5f2797e1ed54a1f1d29e7f35eddc712a83eafdcd45d32e592aa38754"
+    },
+    {
+      "path": "app/assets/meetups/outdoor_nature-1.webp",
+      "sha1": "2fc04420229bff755db5a729ec0297b6b88a8c1b",
+      "sha256": "594165d0f76ebc3cbd2776a8c9ecf05e924933ee0870748b1aad03be2f686b24"
+    },
+    {
+      "path": "app/assets/meetups/outdoor_nature-2.webp",
+      "sha1": "5f7bf30514e59836496593f7326a83d62b4eb90e",
+      "sha256": "a26200c578cf66970d883e94205a598505f6482ff10ebada04036b2185ce6e5e"
+    },
+    {
+      "path": "app/assets/meetups/outdoor_nature-3.webp",
+      "sha1": "0d77430613cd3fc5fa7914f6fd982c572ffd9720",
+      "sha256": "55230084208313af06d36802fcbab2f76ec4d1dd0f915673f6c7e497d2db8b7f"
+    },
+    {
+      "path": "app/assets/meetups/outdoor_nature-4.webp",
+      "sha1": "e73ed1871119a0cc4769e74fd5e0a26f0758cb8e",
+      "sha256": "7230020ebda51363e5d0b0be72cdb54e5642238010e1b4c26b74a166de303c6b"
+    },
+    {
+      "path": "app/assets/meetups/outdoor_nature-5.webp",
+      "sha1": "9b2822ee83dc903b7c85e8c4f200d94c2c1a48ed",
+      "sha256": "1c85ca02802538892000fa92b26948ef264ea4fdcca7b3e1c38f2992ed40c0a3"
+    },
+    {
+      "path": "app/assets/meetups/restaurants_coffee-1.webp",
+      "sha1": "4f476eb3e58e4c445c5b0d93df386bc654f82b91",
+      "sha256": "abda30cadcdb0f71cf87303155bc37ad64b246d0decd2e474c37d7b10c5a376f"
+    },
+    {
+      "path": "app/assets/meetups/restaurants_coffee-2.webp",
+      "sha1": "3088314f9ca908812db33179a15ca0e0a9afda22",
+      "sha256": "7aba330622973d4aa39224f92fed7422cd26352a821ebcd6ee8a66de76f660b2"
+    },
+    {
+      "path": "app/assets/meetups/restaurants_coffee-3.webp",
+      "sha1": "32adc04659fb87d9f486a821bc7e6619a2b983fa",
+      "sha256": "dbabcb4aa6b77b1aba9896c7459c70282d5685680f3a78bd79c6230c9aa54749"
+    },
+    {
+      "path": "app/assets/meetups/restaurants_coffee-4.webp",
+      "sha1": "f567b602f1b55ded3c8b4ff3114817eeda8ae891",
+      "sha256": "bf9e97c98295721d4899958fb1d454d2ed3dcf782fce563b56b12afbfa3e88f1"
+    },
+    {
+      "path": "app/assets/meetups/restaurants_coffee-5.webp",
+      "sha1": "3631decd9d493d4648525bca925d29f4362f0d2c",
+      "sha256": "1cfd5b78a523dcfe471e02fa9e6a19fdacbabb07faf48bfb4c665700033f4ab7"
+    },
+    {
+      "path": "app/assets/meetups/sports_fitness-1.webp",
+      "sha1": "82069be92ea554d3f364fb8a54ddd8f280f03014",
+      "sha256": "16cf75811f4109d7f2eba62042307f8394aca0d5db687ae05369d88d885c2cab"
+    },
+    {
+      "path": "app/assets/meetups/sports_fitness-2.webp",
+      "sha1": "1d6a1155dd1e3395dd2abbeb434a5dbe215922a6",
+      "sha256": "8061e16711804f6830b2fc32e7d527b12ed12b3fe657117fb778a2c11c0d7fea"
+    },
+    {
+      "path": "app/assets/meetups/sports_fitness-3.webp",
+      "sha1": "7c6f27a018c86d684246c716e609f00fa8f0f611",
+      "sha256": "06ab73f6cf77ab998e1e7d82e5c1823c7cad6d6d82ec682b3b1d08b8386a1b71"
+    },
+    {
+      "path": "app/assets/meetups/sports_fitness-4.webp",
+      "sha1": "9a970ce47e794f57a7f4e48e22a41d1982fb7d03",
+      "sha256": "5a627f86011bab01e0954f61fa34172cc52c68c0e8101a35f74378862fb7ea7a"
+    },
+    {
+      "path": "app/assets/meetups/sports_fitness-5.webp",
+      "sha1": "d8b05f909814127b3c25465ba18a5c7bc170728e",
+      "sha256": "8ab25f716614cb53c810891bbe98f6342089531bf7aa17ee876baf590d321ea8"
+    },
+    {
+      "path": "app/components/event-location-map.tsx",
+      "sha1": "7d036da0c4cb0c15efe4b9773e1c61b0393b47b1",
+      "sha256": "0d1c70bfdf19d3d71fd1d97604a26b260e8d8b74bb4389b6b4b4e470ac9f8e12"
+    },
+    {
+      "path": "app/components/event-photos.tsx",
+      "sha1": "e3a1897f85e6a78f72ff75e3459809a882563dfe",
+      "sha256": "bbdf17a25c0b3f180f5c68d928ad837923d817139d07d5e68bfbb246d1acfa57"
+    },
+    {
+      "path": "app/components/event-share-actions.tsx",
+      "sha1": "13e4595260c5f9738ce87ff9b969993bc543df9c",
+      "sha256": "fd07816bdf52d87e3fa1fa06ac8f39610881b7c293526088a3726737fcb11431"
+    },
+    {
+      "path": "app/components/meetup-cover.tsx",
+      "sha1": "65fdefec0d8c8c3cd933c96962e6714521ee35e1",
+      "sha256": "6fc50388592ab554a306a20d0a101b4d82a1ebb580acff4473502b6a3ade4d9a"
+    },
+    {
+      "path": "app/events-sitemap.xml/route.ts",
+      "sha1": "9aa2d3e07767f2222eed033f40bb9d2407ad5586",
+      "sha256": "488b2f26df485ebd763fbbcd8bc46d7542c5be25776b7201700e2bd8b893a3fa"
+    },
+    {
+      "path": "app/events/[slug]/map/[slot]/route.ts",
+      "sha1": "dfa33350228816ba521bb54b57fbad55afdc53e8",
+      "sha256": "ac5b3f0e5e337d0c2f3c58c88d2dbd78c688185ac4dab4cdf428b218fcb9392a"
+    },
+    {
+      "path": "app/events/[slug]/media/[slot]/route.ts",
+      "sha1": "5a34d46b2e263cec5658172d6d620bfbee9912c2",
+      "sha256": "12fd6f3f4d33ff5f9fec5bb89a4e61563c5709eb1d9ed163bb456caeab562679"
+    },
+    {
+      "path": "app/events/[slug]/page.tsx",
+      "sha1": "979cb6b2f47854e13c160a34e80eac920a9a23af",
+      "sha256": "b22f6fd80073733ba1e893d195dc8775c24dcd7f2dea23b0c372b4110df994bf"
+    },
+    {
+      "path": "app/events/[slug]/participant-media/[slot]/route.ts",
+      "sha1": "49182a87986ac3c32ff98d069e154acab6b167fb",
+      "sha256": "620600cbc26948db7e13584e97f34f48f1db98e6d84c90bdd8d52bfb12d64618"
+    },
+    {
+      "path": "app/favicon.ico",
+      "sha1": "9ecfcc8f0ead0bf3d2d7c39e084b88f41cc89a2e",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "app/fonts/Manrope-Bold.ttf",
+      "sha1": "60de92b476d4d4b51c163ceaa522fb294daccb2f",
+      "sha256": "e7793683898d8a0e4c97ec50116fc021d053f2f72113982076a50a9048f101b5"
+    },
+    {
+      "path": "app/fonts/Manrope-ExtraBold.ttf",
+      "sha1": "79bd9e1dc86dc71ce62e43c8118e23725e4fac6f",
+      "sha256": "6b753fbbbefcdfd17909197147c199d6ebc1cd79742e853bc1e732bc9f49831b"
+    },
+    {
+      "path": "app/fonts/Manrope-Medium.ttf",
+      "sha1": "9faff072110ac0b275d26dceee06d5d228d766d4",
+      "sha256": "acdd0ae608f0e024750c98bb1c4e76c13e31ad2b848eb8da7fcd783c051abafa"
+    },
+    {
+      "path": "app/fonts/Manrope-Regular.ttf",
+      "sha1": "a1c6f40dadc3f9b592ef44bc480f54e59d9dd63e",
+      "sha256": "1ddeeeff9fe3d294f709f2239557278930f56dab89db1fe535dc5c35cd67e0ee"
+    },
+    {
+      "path": "app/fonts/Manrope-SemiBold.ttf",
+      "sha1": "965293219c72eab257c7d23d15157ff8bc54910d",
+      "sha256": "8791ca409cf36b8b2842e40b6b1cd5b42cca064b4fdf24e30f5611536793429d"
+    },
+    {
+      "path": "app/fonts/OFL.txt",
+      "sha1": "12c29b4c541b7ba0f0d5d86818697558c1c28d76",
+      "sha256": "58172e0c0fac2cda8a37b348164bb55e44b0e69051e557e92b1d3f6910141f7b"
+    },
+    {
+      "path": "app/globals.css",
+      "sha1": "c9cbf3dd94bc8eb47b988103c525b9b68928cca4",
+      "sha256": "c62229453214c42cba8d2733a2b5e82f636c1c5db51621a37649d2531d2f8d11"
+    },
+    {
+      "path": "app/layout.tsx",
+      "sha1": "0de80bf9b09314df0fb796cbc132f643c3b54bf7",
+      "sha256": "6e0e971ea942ab8b24a8b15182705065b195ddeedec0c1b1a0b3d6a525789bec"
+    },
+    {
+      "path": "app/page.tsx",
+      "sha1": "d0c8deeef8010383b2fd9b042fc063d027f11d9e",
+      "sha256": "c97b8699ebd7a584d9957fe5143ab643a7d4ffe22756fc18f0acb97a0589e9a0"
+    },
+    {
+      "path": "app/robots.ts",
+      "sha1": "ac000a234b8dbf5a6b00b97a72822af2d6281020",
+      "sha256": "8a2d1de711015689e299ce263bc11a8f7e6417f33b5a835ade660def986fe0af"
+    },
+    {
+      "path": "app/sitemap.xml/route.ts",
+      "sha1": "e4e2131e418b6e7a3068628a26685b717aac9ec6",
+      "sha256": "80918ebf55619afb9f47029affe9cb9333852338bdb937e96fec8e4f65cee962"
+    },
+    {
+      "path": "lib/event-detail-data.ts",
+      "sha1": "f4a4c51c2ead713482421f6f84158b612d052309",
+      "sha256": "00d9769ecb499114ba65eb95c0cbf58fd8128280a8bd763cc8f2332610fe6162"
+    },
+    {
+      "path": "lib/event-json-ld.ts",
+      "sha1": "f5379565df3cabc58a83fcd0ca42732d173ee4ed",
+      "sha256": "2a144c2303d30c76e81da85e25510c71964249d276977ca1bcc0373297192998"
+    },
+    {
+      "path": "lib/event-labels.ts",
+      "sha1": "6afb9b23650145609d94a9e7ab3062af4ad4de7f",
+      "sha256": "b103666f0c339eb5aa54249bc2d617af0d7abe3f60bd0478e4e50f245db79f83"
+    },
+    {
+      "path": "lib/event-map-server.ts",
+      "sha1": "3c252ffaac43632e020c1105304e602354750acf",
+      "sha256": "64b6391516471bf7c47c0eafcee326f0647eeb79716f591f352e027ca720bb57"
+    },
+    {
+      "path": "lib/event-map.ts",
+      "sha1": "3e54a11aa6629e41d7c3262908a040ad4d1ecfae",
+      "sha256": "66a104a617b301614cf2d2d0f5c00720ea450e9d2ef2d6169554b1efa3c4bb5a"
+    },
+    {
+      "path": "lib/event-media.ts",
+      "sha1": "4c93f6df77cdd08cafd8d6c15de913be196d8be5",
+      "sha256": "ca69116941ca962d8e4f1dcd0d7acf9747c763f015df20bcedcfa901ceebb6b4"
+    },
+    {
+      "path": "lib/event-participant-photos.ts",
+      "sha1": "27ab39fac447d7a4b740e43cc2ca95a8273ae133",
+      "sha256": "69c2a554d705ac9c296e90fe3d242a5fa6bc5461383c5eaf5f12b5ea4d1399e2"
+    },
+    {
+      "path": "lib/event-presentation.ts",
+      "sha1": "9db165f035d1c408e3cb7ef337cd8478239de769",
+      "sha256": "7c65e978cf890478c4e6ac369dfd09dd92a853fd1199afcb19ee8a4c3e3f94cd"
+    },
+    {
+      "path": "lib/event-seo.ts",
+      "sha1": "d8db60fe1bfd35326d9a33af91da5caf6dc400d7",
+      "sha256": "fc43487e942f0a5e2d43fd731dfcdc5e1df92e0ce581cc6a623596e72ecba0b9"
+    },
+    {
+      "path": "lib/event-share.ts",
+      "sha1": "5015251e1ce4756b1f69f588e6b22dea58241e80",
+      "sha256": "879cfaccb93612d851a697054bd92938741d3a0d327b2dfe0ee6975ac4c0d031"
+    },
+    {
+      "path": "lib/event-sitemap.ts",
+      "sha1": "1cff5424e3fcbaca93daac9e311aab497fa0b2bd",
+      "sha256": "4c0495c8bfd0d3b27ce0e0c95981383ca3fcd6cafbe42556bcfd8200475881fe"
+    },
+    {
+      "path": "lib/public-backend.ts",
+      "sha1": "f2b0a78f23050ee1950bc088c24069d98c4501e4",
+      "sha256": "990b0dd79d2eda9f91e6c81d253ed63bc4bb2ac67c6eb90f94f8c9d89426b961"
+    },
+    {
+      "path": "lib/public-event-data.ts",
+      "sha1": "2b8f4405d9810029d2dab9e3dbe3b16686589878",
+      "sha256": "66ab81ab485388c813dbeb43860f88f62fd4af4d14ab612c08b75c2b4b79f658"
+    },
+    {
+      "path": "lib/public-events.ts",
+      "sha1": "b96e8372632066926edcb6665021a455b1696707",
+      "sha256": "de2557430ed3a8a2797ab01c50a8e5e5583eb0fdf37c6c55f901812aaa4447e2"
+    },
+    {
+      "path": "lib/supabase.ts",
+      "sha1": "24e83adc033d5b024c4121c79b70e0a0b3a1eeac",
+      "sha256": "5419157443b1076a5eefe681bd4b348040215be320b9f22b5441e30e6663552e"
+    },
+    {
+      "path": "lib/wordpress-sitemap.ts",
+      "sha1": "291c219891e70afb339880fac52570787596b2ad",
+      "sha256": "6d31b8a0565b6edbe39ab3bdceeec2f4112c48b5346340d4d9ec5dea3ae7761d"
+    },
+    {
+      "path": "next.config.ts",
+      "sha1": "e52d25d6cfc5a3aac642adb4289a77fcf2da2762",
+      "sha256": "96cab3e5313d12c800379ba41bc364cb0fab2896f351721b8c5ae4ab2f4d26f2"
+    },
+    {
+      "path": "package-lock.json",
+      "sha1": "55c9348790b1ecf932cfcc6bdf32df98f75eaaea",
+      "sha256": "ecdff576c6036cbe9d02546f1089f2afd9aa7e8feea10fa577ffdf8ebafbda08"
+    },
+    {
+      "path": "package.json",
+      "sha1": "a6a97c0982285d7119f95c68836835d2215e94b3",
+      "sha256": "9abcf1e2b75c754bf1dd42807668547e7aefe704984a88577b08574989d88f80"
+    },
+    {
+      "path": "postcss.config.mjs",
+      "sha1": "8f8be689e9af58f80351df6e6b551146822f42a4",
+      "sha256": "dfac7ac2d86d326a0e5adb024e7943c181393ed17a5fcb8f0315b24c7da6ddde"
+    },
+    {
+      "path": "proxy.ts",
+      "sha1": "71251bf5f396e599b942a228afa501b0c72ccb32",
+      "sha256": "1b7ed635a89eda4c87ffb5c2ed4f3aa19cba2028ab8721ec75a345ea5979c97b"
+    },
+    {
+      "path": "public/favicon.svg",
+      "sha1": "bc45380d0df071c776c67630c06e11d49e336f18",
+      "sha256": "96b914804437a1b62952512f6c6cffb96b61798612dc72d72bb7fe8694e2dcb6"
+    },
+    {
+      "path": "public/file.svg",
+      "sha1": "fb380eeffe87d50b597383664c02982964d0d28c",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "public/globe.svg",
+      "sha1": "2eba23b01a46733bb8423e6d38ebf5f7e95abec5",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "public/logo.svg",
+      "sha1": "423678c4c50612e70fdd63eec6bb2c3eedd5bbb3",
+      "sha256": "1bba68ccde43e9d333185cc261d921224b3b33146c1032fbf1f3809ca1eca149"
+    },
+    {
+      "path": "public/next.svg",
+      "sha1": "3f3e95622612b989c5bd6a03299a308c6f3c7e6b",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "path": "public/vercel.svg",
+      "sha1": "cebb8852d58c8886be3e9051a26957f42bb82f1a",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "path": "public/window.svg",
+      "sha1": "54c48e0daa6caa317fe1b4c419007fd93e948db9",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha1": "9d157ab6959f14565a9433f1b5eb447eb5bbc108",
+      "sha256": "9b92cfa2e569828f8b7d14e89beadc88b56085d283976a571ca022aea0c8da23"
+    }
+  ]
+}
