@@ -161,7 +161,7 @@ try {
       check(()=>assert.doesNotMatch(rootBody + JSON.stringify([...root.headers]),forbiddenOutput))
       check(()=>assert.ok(calls.length-before <= 5, 'Homepage caps four availability probes plus one selected-city query'))
       const homepageCalls=calls.slice(before)
-      check(()=>assert.ok(homepageCalls.every(url=>url.pathname==='/rest/v1/events'&&url.searchParams.get('limit')==='12')))
+      check(()=>assert.ok(homepageCalls.every(url=>url.pathname==='/rest/v1/events'&&url.searchParams.get('limit')===(url.searchParams.get('select')?.includes('description')?'60':'12'))))
       check(()=>assert.ok(homepageCalls.filter(url=>url.searchParams.get('select')?.includes('description')).length<=1))
       if (method === 'GET') {
         check(()=>assert.match(rootBody,/<h1[^>]*><span>Ta vibe\.<\/span>/))

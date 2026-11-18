@@ -15,7 +15,7 @@
     "Your people.",
     "Your next experience."
   ],
-  "intro": "Discover events near you, try something new and bring people together with your own Meetups.",
+  "intro": "Evy is the app for discovering events and activities in Switzerland, sharing your plans and creating your own Meetups for free.",
   "explore": "Explore events",
   "download": "Download Evy",
   "free": "Free download · iOS & Android",
@@ -50,7 +50,7 @@
     "Share your Meetup and invite others to join you."
   ],
   "meetupCta": "Create a Meetup for free",
-  "meetupHelp": "Open Evy, sign in, then use Meetup creation inside the app.",
+  "meetupHelp": "Open Evy, sign in and choose Meetup creation. Add your activity, place and date, then share your idea. The examples below are ideas to create, not advertised Meetups.",
   "activity": [
     "Running",
     "Coffee",
@@ -82,11 +82,11 @@
     "Explore available promotional tools"
   ],
   "orgCta": "Publish an event",
-  "orgHelp": "Open Evy and enter organizer mode. You’ll need an account to publish.",
+  "orgHelp": "Sign in to Evy and switch to Organizer mode. Create your event with its details, location, dates and images, then use the available publishing and sharing options.",
   "orgPro": "Organizer Pro is Evy’s premium offering. See the available options and terms in the app.",
   "downloadTag": "FIND YOUR VIBE",
   "downloadTitle": "Your next experience starts here.",
-  "downloadIntro": "The events, the people, the possibilities. Take Evy with you.",
+  "downloadIntro": "Get the Evy app on iPhone or Android to discover events, keep track of your plans and organize activities. You can also open Evy in your browser.",
   "scan": "Scan to download",
   "stores": "Download free on iOS and Android.",
   "web": "Prefer to explore on the web?",
@@ -107,13 +107,13 @@
   "photoFallback": "A new experience awaits",
   "back": "Back to home",
   "discoveryTitle": "Find your next experience.",
-  "discoveryIntro": "Explore upcoming public events without an account. Join the conversation in Evy.",
+  "discoveryIntro": "Choose an available city: Lausanne, Geneva, Neuchâtel or Zurich. Browse upcoming public events, dates and locations without an account. Open Evy to join the conversation.",
   "meta": [
-    "Discover events near you and create free Meetups. Get Evy on iOS and Android.",
-    "Create a free Meetup with Evy: sport, hiking, coffee and experiences to share.",
-    "Publish and manage events with Evy. Help people discover your next experience.",
-    "Download Evy for free on iOS and Android. Find your vibe.",
-    "Explore upcoming public events with Evy. No account needed."
+    "Discover Evy, the app for exploring events and activities in Switzerland, creating free Meetups and sharing your next plans.",
+    "Create a free Meetup with Evy: choose an activity, place and date, then invite other people to join you.",
+    "Publish, manage and share your events with Evy. Explore the promotion tools and their terms in the app.",
+    "Get Evy for iOS and Android to discover events and organize activities. You can also access Evy in your browser.",
+    "Explore upcoming events in Lausanne, Geneva, Neuchâtel and Zurich, subject to availability. View dates and locations without creating an account."
   ],
   "categories": {
     "music_party": "Music party / Night out",
@@ -126,5 +126,12 @@
   },
   "cityPicker": "Choose a city",
   "cityLoading": "Loading events…",
-  "cityResults": "events"
+  "cityResults": "events",
+  "metaTitles": [
+    "Events and activities in Switzerland | Evy",
+    "Create a free Meetup and share an activity | Evy",
+    "Publish and promote your events | Evy",
+    "Download Evy for iOS and Android",
+    "Upcoming events in Switzerland | Evy"
+  ]
 }

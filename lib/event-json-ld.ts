@@ -57,16 +57,20 @@ function cleanText(value: string | null | undefined) {
   return cleaned || undefined
 }
 
+// Known platform publishing accounts from the existing Hunter ownership contract.
+const PLATFORM_PUBLISHER_IDS = new Set([
+  EVY_SWITZERLAND_CREATOR_ID,
+  '752f1e81-22b1-4ed3-8140-248dbd776e2a',
+]);
+export function isPlatformPublisher(event: StructuredDataEvent) {
+  return PLATFORM_PUBLISHER_IDS.has(event.creator_id?.trim() ?? '');
+}
 export function creatorDisplayName(event: StructuredDataEvent) {
-  const externalName = cleanText(event.external_organizer_name)
-  if (
-    event.creator_id?.trim() === EVY_SWITZERLAND_CREATOR_ID &&
-    externalName
-  ) {
-    return externalName
-  }
-
-  return cleanText(event.users?.fullname) ?? cleanText(event.users?.username)
+  const name = isPlatformPublisher(event)
+    ? cleanText(event.external_organizer_name)
+    : cleanText(event.users?.fullname) ?? cleanText(event.users?.username);
+  // Neither a publisher account nor its name establishes that Evy organizes an event.
+  return name && !/^evy(?:\s+(?:switzerland|suisse))?$/i.test(name) ? name : undefined;
 }
 
 function ticketOffers(event: StructuredDataEvent): JsonLdObject[] | undefined {

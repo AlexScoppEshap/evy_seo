@@ -1,4 +1,5 @@
 import Image from "next/image";
+import styles from "./sections.module.css";
 import {
   APP_URL,
   marketingPath,
@@ -94,6 +95,7 @@ export function Meetups({
   standalone?: boolean;
 }) {
   const Heading = standalone ? "h1" : "h2";
+  const StepHeading = standalone ? "h2" : "h3";
   return (
     <section className="section meetup-section" id="meetups">
       <div className="container">
@@ -133,11 +135,11 @@ export function Meetups({
             <p>{d.ideaLabel}</p>
           </div>
         </div>
-        <ol className="meetup-steps">
+        <ol className={`meetup-steps ${styles.steps}`}>
           {d.steps.map((step, i) => (
             <li key={step}>
               <span className="step-number">0{i + 1}</span>
-              <h3>{step}</h3>
+              <StepHeading className={styles.stepHeading}>{step}</StepHeading>
               <p>{d.stepCopy[i]}</p>
             </li>
           ))}

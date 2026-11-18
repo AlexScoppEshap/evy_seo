@@ -15,7 +15,7 @@
     "La tua gente.",
     "La tua prossima esperienza."
   ],
-  "intro": "Scopri gli eventi vicino a te, vivi nuove esperienze e organizza i tuoi Meetup.",
+  "intro": "Evy è l’app per scoprire eventi e attività in Svizzera, condividere le tue uscite e creare gratuitamente i tuoi Meetup.",
   "explore": "Scopri gli eventi",
   "download": "Scarica Evy",
   "free": "Download gratuito · iOS e Android",
@@ -37,7 +37,7 @@
   "event": "Evento",
   "unknownCity": "Luogo da scoprire",
   "meetupTag": "LE BELLE IDEE PARTONO DA TE",
-  "meetupTitle": "Non cercare solo programmi. Crea i tuoi.",
+  "meetupTitle": "Non limitarti a cercare attività. Organizza la tua.",
   "meetupIntro": "Tennis, escursioni, corsa, un caffè o un’uscita con gli amici: crea un Meetup gratuitamente e invita altre persone a partecipare.",
   "steps": [
     "Scegli un’attività.",
@@ -50,7 +50,7 @@
     "Condividi il Meetup e invita gli altri a unirsi a te."
   ],
   "meetupCta": "Crea un Meetup gratis",
-  "meetupHelp": "Apri Evy, accedi e usa la funzione di creazione dei Meetup nell’app.",
+  "meetupHelp": "Apri Evy, accedi e scegli di creare un Meetup. Indica l’attività, il luogo e la data, poi condividi la tua idea. Gli esempi qui sotto sono spunti da realizzare, non Meetup già in programma.",
   "activity": [
     "Corsa",
     "Un caffè",
@@ -82,11 +82,11 @@
     "Scopri gli strumenti promozionali disponibili"
   ],
   "orgCta": "Pubblica un evento",
-  "orgHelp": "Apri Evy e passa alla modalità organizzatore. Per pubblicare serve un account.",
+  "orgHelp": "Accedi a Evy e passa alla modalità organizzatore. Crea il tuo evento con descrizione, luogo, date e immagini, poi usa le opzioni disponibili per pubblicarlo e condividerlo.",
   "orgPro": "Organizer Pro è l’offerta premium di Evy. Consulta opzioni e condizioni disponibili nell’app.",
   "downloadTag": "FIND YOUR VIBE",
   "downloadTitle": "La tua prossima esperienza inizia qui.",
-  "downloadIntro": "Eventi, persone e nuove possibilità. Porta Evy con te.",
+  "downloadIntro": "Scarica Evy su iPhone o Android per scoprire eventi, ritrovare le tue uscite e organizzare attività. Puoi aprire Evy anche dal browser.",
   "scan": "Scansiona per scaricare",
   "stores": "Download gratuito per iOS e Android.",
   "web": "Preferisci esplorare sul web?",
@@ -107,13 +107,13 @@
   "photoFallback": "Una nuova esperienza ti aspetta",
   "back": "Torna alla home",
   "discoveryTitle": "Trova la tua prossima uscita.",
-  "discoveryIntro": "Esplora gli eventi pubblici in programma senza un account. Ritrova le interazioni su Evy.",
+  "discoveryIntro": "Scegli una città disponibile: Losanna, Ginevra, Neuchâtel o Zurigo. Consulta i prossimi eventi pubblici, le date e i luoghi senza account. Apri Evy per parlare con gli altri partecipanti.",
   "meta": [
-    "Scopri gli eventi vicino a te e crea Meetup gratuiti. Evy è disponibile per iOS e Android.",
-    "Crea un Meetup gratuito con Evy: sport, escursioni, caffè ed esperienze da condividere.",
-    "Pubblica e gestisci eventi con Evy. Fai conoscere le tue prossime esperienze.",
-    "Scarica Evy gratuitamente su iOS e Android. Find your vibe.",
-    "Esplora gli eventi pubblici in programma con Evy, senza account."
+    "Scopri Evy, l’app per trovare eventi e attività in Svizzera, creare Meetup gratuiti e condividere le tue prossime uscite.",
+    "Crea un Meetup gratuito con Evy: scegli un’attività, un luogo e una data, poi invita altre persone a partecipare.",
+    "Pubblica, gestisci e condividi i tuoi eventi con Evy. Scopri gli strumenti di promozione e le relative condizioni nell’app.",
+    "Scarica Evy per iOS e Android per scoprire eventi e organizzare attività. Puoi accedere a Evy anche dal browser.",
+    "Scopri i prossimi eventi a Losanna, Ginevra, Neuchâtel e Zurigo, secondo disponibilità. Consulta date e luoghi senza creare un account."
   ],
   "categories": {
     "music_party": "Festa / Serata musicale",
@@ -126,5 +126,12 @@
   },
   "cityPicker": "Scegli una città",
   "cityLoading": "Caricamento degli eventi…",
-  "cityResults": "eventi"
+  "cityResults": "eventi",
+  "metaTitles": [
+    "Eventi e attività in Svizzera | Evy",
+    "Crea un Meetup gratuito e condividi un’attività | Evy",
+    "Pubblica e promuovi i tuoi eventi | Evy",
+    "Scarica Evy per iOS e Android",
+    "Prossimi eventi in Svizzera | Evy"
+  ]
 }

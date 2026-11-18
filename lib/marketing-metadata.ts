@@ -14,7 +14,7 @@ export function marketingMetadata(
   page: MarketingPage,
   d: Dictionary,
 ): Metadata {
-  const title = `${page === "home" ? d.hero.join(" ") : d.nav[page === "meetups" ? 1 : page === "organizers" ? 2 : page === "download" ? 3 : 0]} | Evy`;
+  const title = d.metaTitles[pageKeys.indexOf(page)];
   const description = d.meta[pageKeys.indexOf(page)];
   const canonical = origin + marketingPath(locale, page);
   return {

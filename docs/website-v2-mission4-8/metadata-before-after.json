@@ -1,0 +1,202 @@
+[
+  {
+    "locale": "fr",
+    "page": "home",
+    "beforeTitle": "Ta vibe. Tes rencontres. Ta prochaine sortie. | Evy",
+    "afterTitle": "Événements et activités en Suisse | Evy",
+    "beforeDescription": "Découvre les événements près de chez toi et crée tes Meetups gratuits. Evy, disponible sur iOS et Android.",
+    "afterDescription": "Découvre Evy, l’application pour explorer les événements et activités en Suisse, créer un Meetup gratuit et partager tes prochaines sorties."
+  },
+  {
+    "locale": "fr",
+    "page": "meetups",
+    "beforeTitle": "Meetups | Evy",
+    "afterTitle": "Crée un Meetup gratuit et partage une activité | Evy",
+    "beforeDescription": "Crée gratuitement un Meetup avec Evy : sport, randonnée, café et activités à partager.",
+    "afterDescription": "Organise gratuitement un Meetup avec Evy : choisis une activité, un lieu et une date, puis invite d’autres personnes à te rejoindre."
+  },
+  {
+    "locale": "fr",
+    "page": "organizers",
+    "beforeTitle": "Organisateurs | Evy",
+    "afterTitle": "Publie et fais connaître tes événements | Evy",
+    "beforeDescription": "Publie et gère tes événements avec Evy. Fais découvrir tes prochaines expériences.",
+    "afterDescription": "Publie, gère et partage tes événements avec Evy. Découvre les outils de promotion et leurs conditions dans l’application."
+  },
+  {
+    "locale": "fr",
+    "page": "download",
+    "beforeTitle": "Télécharger | Evy",
+    "afterTitle": "Télécharge Evy sur iOS et Android",
+    "beforeDescription": "Télécharge gratuitement Evy sur iOS et Android. Find your vibe.",
+    "afterDescription": "Retrouve Evy sur iOS et Android pour découvrir des événements et organiser tes activités. Tu peux aussi accéder à Evy depuis ton navigateur."
+  },
+  {
+    "locale": "fr",
+    "page": "events",
+    "beforeTitle": "Événements | Evy",
+    "afterTitle": "Événements à venir en Suisse | Evy",
+    "beforeDescription": "Explore les prochains événements publics avec Evy, sans compte.",
+    "afterDescription": "Explore les événements à venir à Lausanne, Genève, Neuchâtel et Zürich, selon les disponibilités. Consulte les dates et les lieux sans créer de compte."
+  },
+  {
+    "locale": "en",
+    "page": "home",
+    "beforeTitle": "Your vibe. Your people. Your next experience. | Evy",
+    "afterTitle": "Events and activities in Switzerland | Evy",
+    "beforeDescription": "Discover events near you and create free Meetups. Get Evy on iOS and Android.",
+    "afterDescription": "Discover Evy, the app for exploring events and activities in Switzerland, creating free Meetups and sharing your next plans."
+  },
+  {
+    "locale": "en",
+    "page": "meetups",
+    "beforeTitle": "Meetups | Evy",
+    "afterTitle": "Create a free Meetup and share an activity | Evy",
+    "beforeDescription": "Create a free Meetup with Evy: sport, hiking, coffee and experiences to share.",
+    "afterDescription": "Create a free Meetup with Evy: choose an activity, place and date, then invite other people to join you."
+  },
+  {
+    "locale": "en",
+    "page": "organizers",
+    "beforeTitle": "Organizers | Evy",
+    "afterTitle": "Publish and promote your events | Evy",
+    "beforeDescription": "Publish and manage events with Evy. Help people discover your next experience.",
+    "afterDescription": "Publish, manage and share your events with Evy. Explore the promotion tools and their terms in the app."
+  },
+  {
+    "locale": "en",
+    "page": "download",
+    "beforeTitle": "Download | Evy",
+    "afterTitle": "Download Evy for iOS and Android",
+    "beforeDescription": "Download Evy for free on iOS and Android. Find your vibe.",
+    "afterDescription": "Get Evy for iOS and Android to discover events and organize activities. You can also access Evy in your browser."
+  },
+  {
+    "locale": "en",
+    "page": "events",
+    "beforeTitle": "Events | Evy",
+    "afterTitle": "Upcoming events in Switzerland | Evy",
+    "beforeDescription": "Explore upcoming public events with Evy. No account needed.",
+    "afterDescription": "Explore upcoming events in Lausanne, Geneva, Neuchâtel and Zurich, subject to availability. View dates and locations without creating an account."
+  },
+  {
+    "locale": "de",
+    "page": "home",
+    "beforeTitle": "Dein Vibe. Deine Leute. Dein nächstes Erlebnis. | Evy",
+    "afterTitle": "Events und Aktivitäten in der Schweiz | Evy",
+    "beforeDescription": "Entdecke Events in deiner Nähe und erstelle kostenlose Meetups. Evy für iOS und Android.",
+    "afterDescription": "Entdecke Evy: die App für Events und Aktivitäten in der Schweiz. Erstelle kostenlose Meetups und teile deine Pläne mit anderen."
+  },
+  {
+    "locale": "de",
+    "page": "meetups",
+    "beforeTitle": "Meetups | Evy",
+    "afterTitle": "Kostenlos ein Meetup und gemeinsame Aktivitäten planen | Evy",
+    "beforeDescription": "Erstelle kostenlos ein Meetup mit Evy: Sport, Wandern, Kaffee und gemeinsame Erlebnisse.",
+    "afterDescription": "Erstelle mit Evy kostenlos ein Meetup: Wähle eine Aktivität, einen Ort und ein Datum und lade andere zum Mitmachen ein."
+  },
+  {
+    "locale": "de",
+    "page": "organizers",
+    "beforeTitle": "Veranstalter | Evy",
+    "afterTitle": "Events veröffentlichen und bekannt machen | Evy",
+    "beforeDescription": "Veröffentliche und verwalte Events mit Evy. Mach deine Veranstaltungen bekannt.",
+    "afterDescription": "Veröffentliche, verwalte und teile deine Events mit Evy. Entdecke die Werbemöglichkeiten und ihre Bedingungen in der App."
+  },
+  {
+    "locale": "de",
+    "page": "download",
+    "beforeTitle": "Download | Evy",
+    "afterTitle": "Evy für iOS und Android herunterladen",
+    "beforeDescription": "Lade Evy kostenlos für iOS und Android herunter. Find your vibe.",
+    "afterDescription": "Lade Evy für iOS und Android herunter, entdecke Events und organisiere Aktivitäten. Du kannst Evy auch im Browser nutzen."
+  },
+  {
+    "locale": "de",
+    "page": "events",
+    "beforeTitle": "Events | Evy",
+    "afterTitle": "Kommende Events in der Schweiz | Evy",
+    "beforeDescription": "Entdecke kommende öffentliche Events mit Evy, ganz ohne Konto.",
+    "afterDescription": "Entdecke kommende Events in Lausanne, Genf, Neuenburg und Zürich, je nach Verfügbarkeit. Sieh dir Termine und Orte ohne Konto an."
+  },
+  {
+    "locale": "it",
+    "page": "home",
+    "beforeTitle": "La tua vibe. La tua gente. La tua prossima esperienza. | Evy",
+    "afterTitle": "Eventi e attività in Svizzera | Evy",
+    "beforeDescription": "Scopri gli eventi vicino a te e crea Meetup gratuiti. Evy è disponibile per iOS e Android.",
+    "afterDescription": "Scopri Evy, l’app per trovare eventi e attività in Svizzera, creare Meetup gratuiti e condividere le tue prossime uscite."
+  },
+  {
+    "locale": "it",
+    "page": "meetups",
+    "beforeTitle": "Meetup | Evy",
+    "afterTitle": "Crea un Meetup gratuito e condividi un’attività | Evy",
+    "beforeDescription": "Crea un Meetup gratuito con Evy: sport, escursioni, caffè ed esperienze da condividere.",
+    "afterDescription": "Crea un Meetup gratuito con Evy: scegli un’attività, un luogo e una data, poi invita altre persone a partecipare."
+  },
+  {
+    "locale": "it",
+    "page": "organizers",
+    "beforeTitle": "Organizzatori | Evy",
+    "afterTitle": "Pubblica e promuovi i tuoi eventi | Evy",
+    "beforeDescription": "Pubblica e gestisci eventi con Evy. Fai conoscere le tue prossime esperienze.",
+    "afterDescription": "Pubblica, gestisci e condividi i tuoi eventi con Evy. Scopri gli strumenti di promozione e le relative condizioni nell’app."
+  },
+  {
+    "locale": "it",
+    "page": "download",
+    "beforeTitle": "Scarica | Evy",
+    "afterTitle": "Scarica Evy per iOS e Android",
+    "beforeDescription": "Scarica Evy gratuitamente su iOS e Android. Find your vibe.",
+    "afterDescription": "Scarica Evy per iOS e Android per scoprire eventi e organizzare attività. Puoi accedere a Evy anche dal browser."
+  },
+  {
+    "locale": "it",
+    "page": "events",
+    "beforeTitle": "Eventi | Evy",
+    "afterTitle": "Prossimi eventi in Svizzera | Evy",
+    "beforeDescription": "Esplora gli eventi pubblici in programma con Evy, senza account.",
+    "afterDescription": "Scopri i prossimi eventi a Losanna, Ginevra, Neuchâtel e Zurigo, secondo disponibilità. Consulta date e luoghi senza creare un account."
+  },
+  {
+    "locale": "es",
+    "page": "home",
+    "beforeTitle": "Tu vibe. Tu gente. Tu próxima experiencia. | Evy",
+    "afterTitle": "Eventos y actividades en Suiza | Evy",
+    "beforeDescription": "Descubre eventos cerca de ti y crea Meetups gratis. Evy está disponible para iOS y Android.",
+    "afterDescription": "Descubre Evy, la app para explorar eventos y actividades en Suiza, crear Meetups gratis y compartir tus próximos planes."
+  },
+  {
+    "locale": "es",
+    "page": "meetups",
+    "beforeTitle": "Meetups | Evy",
+    "afterTitle": "Crea un Meetup gratis y comparte una actividad | Evy",
+    "beforeDescription": "Crea un Meetup gratis con Evy: deporte, senderismo, café y experiencias para compartir.",
+    "afterDescription": "Crea un Meetup gratis con Evy: elige una actividad, un lugar y una fecha e invita a otras personas a participar."
+  },
+  {
+    "locale": "es",
+    "page": "organizers",
+    "beforeTitle": "Organizadores | Evy",
+    "afterTitle": "Publica y promociona tus eventos | Evy",
+    "beforeDescription": "Publica y gestiona eventos con Evy. Da a conocer tus próximas experiencias.",
+    "afterDescription": "Publica, gestiona y comparte tus eventos con Evy. Consulta las herramientas de promoción y sus condiciones en la app."
+  },
+  {
+    "locale": "es",
+    "page": "download",
+    "beforeTitle": "Descargar | Evy",
+    "afterTitle": "Descarga Evy para iOS y Android",
+    "beforeDescription": "Descarga Evy gratis para iOS y Android. Find your vibe.",
+    "afterDescription": "Descarga Evy para iOS y Android para descubrir eventos y organizar actividades. También puedes acceder a Evy desde tu navegador."
+  },
+  {
+    "locale": "es",
+    "page": "events",
+    "beforeTitle": "Eventos | Evy",
+    "afterTitle": "Próximos eventos en Suiza | Evy",
+    "beforeDescription": "Explora próximos eventos públicos con Evy, sin necesidad de cuenta.",
+    "afterDescription": "Explora próximos eventos en Lausana, Ginebra, Neuchâtel y Zúrich, según disponibilidad. Consulta fechas y lugares sin crear una cuenta."
+  }
+]

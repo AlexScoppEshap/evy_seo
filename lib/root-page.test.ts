@@ -31,6 +31,9 @@ test("five languages have complete matching dictionaries and unique canonical ma
       assert.ok(!urls.has(url));
       urls.add(url);
       const m = marketingMetadata(locale, page, d);
+      assert.equal(m.title, d.metaTitles[pageKeys.indexOf(page)]);
+      assert.equal(m.description, d.meta[pageKeys.indexOf(page)]);
+      assert.equal(new Set(d.metaTitles).size, 5);
       assert.equal(m.alternates?.canonical, `https://myevy.app${url}`);
       assert.equal(Object.keys(m.alternates!.languages!).length, 6);
       assert.equal(

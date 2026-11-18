@@ -37,7 +37,7 @@ export default function CityEvents({initial,locale,d}:{initial:CitySelection;loc
       {selection.cities.map(city=><button key={city} type="button" aria-pressed={selection.selectedCity===city} aria-controls={panelId} onClick={()=>choose(city)}>{cityLabel(city,locale)}</button>)}
     </div>}
     <div id={panelId} ref={panel} tabIndex={-1} aria-busy={!!loading}>
-      <p className="city-status" role="status" aria-live="polite">{loading?d.cityLoading:selection.selectedCity&&selection.events.length?`${cityLabel(selection.selectedCity,locale)} · ${selection.events.length} ${d.cityResults}`:''}</p>
+      <p className="city-status" role="status" aria-live="polite" hidden={!loading}>{loading?d.cityLoading:''}</p>
       {selection.events.length ? <Carousel key={selection.selectedCity} label={d.eventsTitle} previous={d.previous} next={d.next}>
         {selection.events.map(card=><EventCard key={card.id} card={card} locale={locale} d={d}/>)}
       </Carousel> : <div className="event-empty">

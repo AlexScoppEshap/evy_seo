@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { mobileApplicationJsonLd } from "@/lib/mobile-application";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import {
   marketingPath,
@@ -40,6 +41,9 @@ export default async function MarketingPageView({
     <div className="marketing-site">
       <Header locale={locale} page={page} d={d} />
       <main id="main" tabIndex={-1}>
+        {page === "download" && <script type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(mobileApplicationJsonLd(locale)).replace(/</g, "\\u003c") }} />}
+
         {page === "home" && (
           <>
             <script

@@ -107,3 +107,18 @@ test('maps cancelled, postponed, and genuinely rescheduled events', () => {
   assert.equal(rescheduled.eventStatus, 'https://schema.org/EventRescheduled')
   assert.equal(rescheduled.previousStartDate, '2026-10-17T18:00:00.000Z')
 })
+
+test('platform publishers never become an unverified organizer and native ownership remains intact', () => {
+  for (const creator_id of [EVY_SWITZERLAND_CREATOR_ID, '752f1e81-22b1-4ed3-8140-248dbd776e2a']) {
+    for (const external_organizer_name of [null, '', '  ', 'Evy', 'Evy Switzerland']) {
+      const json = buildEventJsonLd({...baseEvent, creator_id, external_organizer_name, users: {fullname:'Evy Switzerland', username:'evy'}});
+      assert.equal(json.organizer, undefined);
+      assert.equal(json['@type'], 'Event');
+      assert.equal(json.startDate, '2026-10-20T18:00:00.000Z');
+    }
+    assert.deepEqual(buildEventJsonLd({...baseEvent,creator_id,external_organizer_name:' Actual Association '}).organizer, {'@type':'Organization',name:'Actual Association'});
+  }
+  assert.equal(buildEventJsonLd({...baseEvent,users:{fullname:'Evy',username:'evy'}}).organizer, undefined);
+  // Claimed/native events still use the current real creator under the existing contract.
+  assert.deepEqual(buildEventJsonLd({...baseEvent,external_organizer_name:'Outdated imported name'}).organizer, {'@type':'Organization',name:'Native Organizer'});
+});

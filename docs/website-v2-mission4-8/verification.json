@@ -1,0 +1,312 @@
+{
+  "head": "165f29a33574b5c02f0b6f34ad5ed0d89879ab07",
+  "branch": "feature/website-v2",
+  "preExistingFilesUnchanged": true,
+  "legalFilesUnchanged": true,
+  "tests": {
+    "unitPassed": 138,
+    "httpAssertions": 3012,
+    "httpFailures": 0,
+    "lint": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "seoGeo": {
+    "claimCtaPreserved": true,
+    "result": "PASS",
+    "marketingRoutes": 25,
+    "downloadOnlySchema": true,
+    "meetupHeadingHierarchy": true,
+    "unverifiedOrganizerOmitted": true,
+    "recurringClaimRestrictionPreserved": true,
+    "importedDescriptionUntranslated": true,
+    "descriptionLanguage": "No reliable language field in current public contract; no inferred lang added."
+  },
+  "routes": {
+    "routes": [
+      {
+        "path": "/",
+        "locale": "fr",
+        "status": 200,
+        "bytes": 81041,
+        "cards": 12
+      },
+      {
+        "path": "/meetups",
+        "locale": "fr",
+        "status": 200,
+        "bytes": 36453,
+        "cards": 0
+      },
+      {
+        "path": "/organizers",
+        "locale": "fr",
+        "status": 200,
+        "bytes": 37112,
+        "cards": 0
+      },
+      {
+        "path": "/download/",
+        "locale": "fr",
+        "status": 200,
+        "bytes": 32797,
+        "cards": 0
+      },
+      {
+        "path": "/events",
+        "locale": "fr",
+        "status": 200,
+        "bytes": 58735,
+        "cards": 12
+      },
+      {
+        "path": "/en",
+        "locale": "en",
+        "status": 200,
+        "bytes": 79354,
+        "cards": 12
+      },
+      {
+        "path": "/en/meetups",
+        "locale": "en",
+        "status": 200,
+        "bytes": 35847,
+        "cards": 0
+      },
+      {
+        "path": "/en/organizers",
+        "locale": "en",
+        "status": 200,
+        "bytes": 36407,
+        "cards": 0
+      },
+      {
+        "path": "/en/download",
+        "locale": "en",
+        "status": 200,
+        "bytes": 32477,
+        "cards": 0
+      },
+      {
+        "path": "/en/events",
+        "locale": "en",
+        "status": 200,
+        "bytes": 58092,
+        "cards": 12
+      },
+      {
+        "path": "/de",
+        "locale": "de",
+        "status": 200,
+        "bytes": 80361,
+        "cards": 12
+      },
+      {
+        "path": "/de/meetups",
+        "locale": "de",
+        "status": 200,
+        "bytes": 36234,
+        "cards": 0
+      },
+      {
+        "path": "/de/organizers",
+        "locale": "de",
+        "status": 200,
+        "bytes": 36920,
+        "cards": 0
+      },
+      {
+        "path": "/de/download",
+        "locale": "de",
+        "status": 200,
+        "bytes": 32697,
+        "cards": 0
+      },
+      {
+        "path": "/de/events",
+        "locale": "de",
+        "status": 200,
+        "bytes": 58605,
+        "cards": 12
+      },
+      {
+        "path": "/it",
+        "locale": "it",
+        "status": 200,
+        "bytes": 80410,
+        "cards": 12
+      },
+      {
+        "path": "/it/meetups",
+        "locale": "it",
+        "status": 200,
+        "bytes": 36155,
+        "cards": 0
+      },
+      {
+        "path": "/it/organizers",
+        "locale": "it",
+        "status": 200,
+        "bytes": 36808,
+        "cards": 0
+      },
+      {
+        "path": "/it/download",
+        "locale": "it",
+        "status": 200,
+        "bytes": 32537,
+        "cards": 0
+      },
+      {
+        "path": "/it/events",
+        "locale": "it",
+        "status": 200,
+        "bytes": 58681,
+        "cards": 12
+      },
+      {
+        "path": "/es",
+        "locale": "es",
+        "status": 200,
+        "bytes": 80364,
+        "cards": 12
+      },
+      {
+        "path": "/es/meetups",
+        "locale": "es",
+        "status": 200,
+        "bytes": 36138,
+        "cards": 0
+      },
+      {
+        "path": "/es/organizers",
+        "locale": "es",
+        "status": 200,
+        "bytes": 36791,
+        "cards": 0
+      },
+      {
+        "path": "/es/download",
+        "locale": "es",
+        "status": 200,
+        "bytes": 32705,
+        "cards": 0
+      },
+      {
+        "path": "/es/events",
+        "locale": "es",
+        "status": 200,
+        "bytes": 58738,
+        "cards": 12
+      }
+    ],
+    "localLinks": 35,
+    "assets": 20,
+    "secureEventCovers": {
+      "available": 12,
+      "unavailable": 0
+    },
+    "invalidRoutes": 7,
+    "result": "PASS",
+    "visualBrowserReview": "unavailable: browser access host unavailable"
+  },
+  "legal": {
+    "results": [
+      {
+        "slug": "privacy",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "terms",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "legal",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "cookies",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "community-guidelines",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "child-safety",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "support",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "contact-us",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      },
+      {
+        "slug": "account-deletion",
+        "status": 200,
+        "exactText": true,
+        "links": true,
+        "viewports": [
+          390,
+          1280
+        ]
+      }
+    ],
+    "contact": "Explicit email fallback; no sending endpoint or fake form",
+    "eventRsc404": true
+  },
+  "browser": "Five languages at 390/800/1280px: hierarchy, step typography and no horizontal overflow passed.",
+  "languageLimitation": "No reliable public description-language contract; no inferred attribute added.",
+  "initialLiveMediaIncident": "One 502; complete subsequent route/media review passed with 12/12 covers."
+}

@@ -15,7 +15,7 @@
     "Tes rencontres.",
     "Ta prochaine sortie."
   ],
-  "intro": "Découvre les événements près de chez toi, explore de nouvelles expériences et organise tes propres Meetups.",
+  "intro": "Evy est l’application pour découvrir des événements et des activités en Suisse, partager tes sorties et créer gratuitement tes propres Meetups.",
   "explore": "Découvrir les événements",
   "download": "Télécharger Evy",
   "free": "Téléchargement gratuit · iOS & Android",
@@ -50,7 +50,7 @@
     "Partage ton Meetup et propose à d’autres de te rejoindre."
   ],
   "meetupCta": "Créer un Meetup gratuitement",
-  "meetupHelp": "Ouvre Evy, connecte-toi, puis utilise la création de Meetup dans l’application.",
+  "meetupHelp": "Ouvre Evy, connecte-toi et choisis la création de Meetup. Indique ton activité, le lieu et la date, puis partage ton idée. Les exemples ci-dessous sont des idées à créer, pas des Meetups annoncés.",
   "activity": [
     "Running",
     "Un café",
@@ -82,11 +82,11 @@
     "Découvre les outils de promotion disponibles"
   ],
   "orgCta": "Publier un événement",
-  "orgHelp": "Ouvre Evy et accède au mode organisateur. Un compte est nécessaire pour publier.",
+  "orgHelp": "Connecte-toi à Evy et passe en mode organisateur. Crée ton événement avec ses informations, son lieu, ses dates et ses visuels, puis utilise les options de publication et de partage disponibles.",
   "orgPro": "Organizer Pro est l’offre premium d’Evy. Consulte les options et conditions disponibles dans l’application.",
   "downloadTag": "FIND YOUR VIBE",
   "downloadTitle": "Ta prochaine expérience commence ici.",
-  "downloadIntro": "Les événements, les rencontres et les idées de sorties. Emporte Evy avec toi.",
+  "downloadIntro": "Télécharge l’application Evy sur iPhone ou Android pour découvrir des événements, retrouver tes sorties et organiser des activités. Tu peux aussi ouvrir Evy dans ton navigateur.",
   "scan": "Scanne pour télécharger",
   "stores": "Disponible gratuitement sur iOS et Android.",
   "web": "Tu préfères explorer sur le web ?",
@@ -107,13 +107,13 @@
   "photoFallback": "Une nouvelle expérience t’attend",
   "back": "Retour à l’accueil",
   "discoveryTitle": "Trouve ta prochaine sortie.",
-  "discoveryIntro": "Une sélection des prochains événements publics. Explore sans créer de compte ; retrouve les interactions dans Evy.",
+  "discoveryIntro": "Choisis une ville parmi celles disponibles : Lausanne, Genève, Neuchâtel ou Zürich. Consulte les prochains événements publics, leurs dates et leurs lieux sans compte. Pour participer aux échanges, ouvre Evy.",
   "meta": [
-    "Découvre les événements près de chez toi et crée tes Meetups gratuits. Evy, disponible sur iOS et Android.",
-    "Crée gratuitement un Meetup avec Evy : sport, randonnée, café et activités à partager.",
-    "Publie et gère tes événements avec Evy. Fais découvrir tes prochaines expériences.",
-    "Télécharge gratuitement Evy sur iOS et Android. Find your vibe.",
-    "Explore les prochains événements publics avec Evy, sans compte."
+    "Découvre Evy, l’application pour explorer les événements et activités en Suisse, créer un Meetup gratuit et partager tes prochaines sorties.",
+    "Organise gratuitement un Meetup avec Evy : choisis une activité, un lieu et une date, puis invite d’autres personnes à te rejoindre.",
+    "Publie, gère et partage tes événements avec Evy. Découvre les outils de promotion et leurs conditions dans l’application.",
+    "Retrouve Evy sur iOS et Android pour découvrir des événements et organiser tes activités. Tu peux aussi accéder à Evy depuis ton navigateur.",
+    "Explore les événements à venir à Lausanne, Genève, Neuchâtel et Zürich, selon les disponibilités. Consulte les dates et les lieux sans créer de compte."
   ],
   "categories": {
     "music_party": "Fête / Soirée musicale",
@@ -126,5 +126,12 @@
   },
   "cityPicker": "Choisir une ville",
   "cityLoading": "Chargement des événements…",
-  "cityResults": "événements"
+  "cityResults": "événements",
+  "metaTitles": [
+    "Événements et activités en Suisse | Evy",
+    "Crée un Meetup gratuit et partage une activité | Evy",
+    "Publie et fais connaître tes événements | Evy",
+    "Télécharge Evy sur iOS et Android",
+    "Événements à venir en Suisse | Evy"
+  ]
 }

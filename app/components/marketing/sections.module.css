@@ -1,0 +1,15 @@
+/* Keep existing step typography while allowing the correct semantic heading. */
+.steps .stepHeading.stepHeading {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+  text-wrap: wrap;
+  margin: 0 0 10px;
+}
+@media (max-width: 850px) {
+  .steps .stepHeading.stepHeading { font-size: 16px; }
+}
+@media (max-width: 600px) {
+  .steps .stepHeading.stepHeading { font-size: 19px; }
+}

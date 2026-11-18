@@ -45,7 +45,7 @@ test("marketing list fails closed and performs one bounded query with required f
   assert.equal(result.events.length, 1);
   assert.equal(calls.length, 1);
   const q = calls[0].searchParams;
-  assert.equal(q.get("limit"), "12");
+  assert.equal(q.get("limit"), "60");
   assert.equal(q.get("is_public"), "eq.true");
   assert.equal(q.get("ai_moderation_status"), "eq.approved");
   assert.equal(q.get("users.account_status"), "eq.active");
@@ -117,4 +117,20 @@ test("mixed currencies are not compared and outages differ from empty inventory"
     ).state,
     "unavailable",
   );
+});
+
+test("marketing cards keep the earliest eligible occurrence of each name within one bounded pool", async () => {
+  const rows = [
+    {...base, name: "Festival du lac", is_public: false},
+    {...base, name: "Festival du lac", id: "10000000-0000-0000-0000-000000000001"},
+    {...base, name: "  FESTIVAL  DU LAC  ", id: "10000000-0000-0000-0000-000000000002"},
+    ...Array.from({length: 15}, (_, i) => ({...base, id: `20000000-0000-0000-0000-${String(i).padStart(12, "0")}`, name: `Concert ${i}`})),
+  ];
+  const {db, calls} = dbWith(rows);
+  const result = await readMarketingEvents(db, "https://fixture.supabase.co", now);
+  assert.equal(result.events.length, 12);
+  assert.equal(result.events[0].id, "10000000-0000-0000-0000-000000000001");
+  assert.equal(new Set(result.events.map(e => e.title.toLowerCase())).size, 12);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].searchParams.get("limit"), "60");
 });

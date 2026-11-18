@@ -25,7 +25,7 @@ test('availability uses fixed minimal bounded probes; only selected city loads c
  assert.deepEqual(result.cities,['ch-lausanne','ch-geneve']);assert.equal(result.selectedCity,'ch-lausanne');assert.equal(result.events.length,1);
  assert.equal(calls.length,5);
  for(const q of calls.map(u=>u.searchParams)){
-   assert.equal(q.get('limit'),'12');assert.equal(q.get('country_code'),'ilike.CH');assert.equal(q.get('is_public'),'eq.true');
+   assert.equal(q.get('limit'),q.get('select')?.includes('description')?'60':'12');assert.equal(q.get('country_code'),'ilike.CH');assert.equal(q.get('is_public'),'eq.true');
    assert.equal(q.get('ai_moderation_status'),'eq.approved');assert.equal(q.get('users.account_status'),'eq.active');
    assert.ok(q.getAll('or').some(v=>v.includes('recurrence_state')));assert.ok(q.getAll('or').some(v=>v.includes('city.ilike.')));
    assert.ok(q.getAll('or').some(v=>v.includes('end_date.gt.')));assert.equal(q.get('seo_slug'),'not.is.null');

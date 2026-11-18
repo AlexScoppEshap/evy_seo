@@ -1,0 +1,8 @@
+{
+  "app/components/marketing/city-events.tsx": "8a4adfd9ec85d3be8b69f0104bbbd079a4f3e4dea1cb0502a531af69299a9fff",
+  "app/marketing.css": "4da98c8874f29f47aa614925c7d443c0f8c7c96c783c32335a4d2540843a68d1",
+  "lib/marketing-cities.test.ts": "296202b5fb573c71239cfe7801569bc4bfe6f7f133a5813da4e3b6004ed058ac",
+  "lib/marketing-events.test.ts": "83b057f362dfd60a56f6e5c0872b443306cdf1cf54fcdc5d30fd5be901d3f2f3",
+  "lib/marketing-events.ts": "a18231fb8a0b79055601570a2ee0c2b8c773a153e53d12b6e6c887a26935d2ba",
+  "scripts/seo-http-smoke.mjs": "9a7c870fbf3a828222b52060a25568894baab23750aad1d34845c3ce5275bb7b"
+}

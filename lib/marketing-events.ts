@@ -80,6 +80,12 @@ export function projectEventCard(
     multipleCurrencies: currencies.size > 1,
   };
 }
+// Inspect a bounded candidate pool to fill 12 cards without repeated event names.
+const MARKETING_CANDIDATE_LIMIT = 60;
+function eventNameKey(name: string | null) {
+  return (name ?? "").normalize("NFKC").trim().toLowerCase().replace(/\s+/gu, " ");
+}
+
 export async function readMarketingEvents(
   db: SupabaseClient,
   backendOrigin: string,
@@ -102,13 +108,14 @@ export async function readMarketingEvents(
       .or(`end_date.is.null,end_date.gt.${now.toISOString()}`).not("seo_slug", "is", null)
       .order("start_date")
       .order("id")
-      .limit(12)
+      .limit(MARKETING_CANDIDATE_LIMIT)
       .abortSignal(AbortSignal.timeout(5000))
       ;
     if (city) query = query.ilike("country_code", city.country).or(city.aliases.map(a=>`city.ilike.${a}`).join(","));
     const { data, error } = await query.returns<unknown[]>();
     if (error || !Array.isArray(data))
       return { state: "unavailable", events: [] };
+    const seenNames = new Set<string>();
     const events = data
       .filter(isPublicEventRecord)
       .filter(
@@ -121,6 +128,12 @@ export async function readMarketingEvents(
           Date.parse(e.start_date!) >= now.getTime() &&
           (!isoInstant(e.end_date) || Date.parse(e.end_date!) > now.getTime()),
       )
+      .filter((event) => {
+        const name = eventNameKey(event.name);
+        if (seenNames.has(name)) return false;
+        seenNames.add(name);
+        return true;
+      })
       .slice(0, 12)
       .map((e) => projectEventCard(e, backendOrigin));
     return { state: events.length ? "ready" : "empty", events };

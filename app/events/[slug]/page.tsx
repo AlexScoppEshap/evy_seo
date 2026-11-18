@@ -3,6 +3,7 @@ import {
   buildEventJsonLd,
   serializeJsonLd,
   creatorDisplayName,
+  isPlatformPublisher,
   EVY_SWITZERLAND_CREATOR_ID,
 } from '@/lib/event-json-ld'
 import { getPublicEvent, getOtherDates, getEventDetailExtras } from '@/lib/public-events'
@@ -163,21 +164,21 @@ export default async function EventPage({
       </section>
 
       <section className="relative mx-auto -mt-3 max-w-3xl rounded-t-[20px] bg-white px-4 sm:rounded-b-[20px]">
-        {organizer && (
+        {(organizer || claimable) && (
           <div className="flex items-center gap-3 py-3.5">
           <div className="grid h-[54px] w-[54px] shrink-0 place-items-center rounded-full bg-[#7C3AED]/10 text-[#77747D]">
-            {avatar ? <Image src={avatar} alt="" width={54} height={54} unoptimized className="h-[54px] w-[54px] rounded-full object-cover" /> : <PersonIcon />}
+            {avatar && !isPlatformPublisher(event) ? <Image src={avatar} alt="" width={54} height={54} unoptimized className="h-[54px] w-[54px] rounded-full object-cover" /> : <PersonIcon />}
           </div>
           <div className="min-w-0 flex-1">
             <div className="flex min-w-0 items-center gap-1.5">
-              <a href={profileUrl} className="truncate text-base font-extrabold hover:underline">{organizer}</a>
+              <span className="truncate text-base font-extrabold">{!organizer ? "Published on Evy" : isPlatformPublisher(event) ? organizer : <a href={profileUrl} className="hover:underline">{organizer}</a>}</span>
             </div>
             <div className="mt-1 flex flex-wrap items-center gap-2">
-              <span className={`inline-flex rounded-full border px-2 py-1 text-[9px] font-extrabold ${extras.organizerPro ? 'border-transparent text-white' : 'border-[#A78BFA]/40 bg-[#7C3AED]/10 text-[#7C3AED]'}`} style={extras.organizerPro ? { background: brandGradient } : undefined}>{extras.organizerPro ? 'Organizer Pro' : 'Organizer'}</span>
+              {organizer && <span className={`inline-flex rounded-full border px-2 py-1 text-[9px] font-extrabold ${(extras.organizerPro && !isPlatformPublisher(event)) ? 'border-transparent text-white' : 'border-[#A78BFA]/40 bg-[#7C3AED]/10 text-[#7C3AED]'}`} style={(extras.organizerPro && !isPlatformPublisher(event)) ? { background: brandGradient } : undefined}>{(extras.organizerPro && !isPlatformPublisher(event)) ? 'Organizer Pro' : 'Organizer'}</span>}
               {claimable && <a href={appEventUrl} className="text-xs font-semibold text-[#7C3AED] underline">Claim this event</a>}
             </div>
           </div>
-          <a href={profileUrl} className="shrink-0 rounded-xl border border-[#7C3AED] px-3 py-2.5 text-xs font-bold text-[#7C3AED]">Follow in Evy</a>
+          <a href={profileUrl} className="shrink-0 rounded-xl border border-[#7C3AED] px-3 py-2.5 text-xs font-bold text-[#7C3AED]">{isPlatformPublisher(event) ? "Publisher in Evy" : "Follow in Evy"}</a>
           </div>
         )}
 
