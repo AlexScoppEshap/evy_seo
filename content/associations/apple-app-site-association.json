@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": [
+          "FMXSFC5DVB.com.eshap.evy"
+        ],
+        "components": [
+          {
+            "/": "/event/*"
+          },
+          {
+            "/": "/user/*"
+          },
+          {
+            "/": "/account-recovery"
+          }
+        ]
+      }
+    ]
+  }
+}

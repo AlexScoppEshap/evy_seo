@@ -1,0 +1,127 @@
+{
+  "nav": [
+    "Events",
+    "Meetups",
+    "Veranstalter",
+    "Download"
+  ],
+  "language": "Sprache",
+  "menu": "Menü",
+  "close": "Schließen",
+  "skip": "Zum Inhalt",
+  "eyebrow": "DEIN NÄCHSTES ERLEBNIS BEGINNT HIER",
+  "hero": [
+    "Dein Vibe.",
+    "Deine Leute.",
+    "Dein nächstes Erlebnis."
+  ],
+  "intro": "Entdecke Events in deiner Nähe, probiere Neues aus und bring mit deinen eigenen Meetups Menschen zusammen.",
+  "explore": "Events entdecken",
+  "download": "Evy herunterladen",
+  "free": "Kostenloser Download · iOS & Android",
+  "scroll": "Draußen geht es weiter",
+  "appCaption": "Echter App-Screenshot auf Französisch. Abgebildete Events sind keine aktuelle Auswahl.",
+  "eventsTag": "ECHTE EVENTS. ECHTE ERLEBNISSE.",
+  "eventsTitle": "Dein nächster Plan wartet.",
+  "eventsIntro": "Ein Konzert, ein Abend unterwegs, eine neue Entdeckung. Finde, was zu dir passt.",
+  "allEvents": "Alle Events",
+  "empty": "Hier gibt es gerade keine kommenden Events. Schau bald wieder vorbei oder entdecke Evy.",
+  "unavailable": "Die Events sind vorübergehend nicht verfügbar. Du kannst die App weiterhin erkunden.",
+  "openApp": "Evy öffnen",
+  "previous": "Vorherige Events",
+  "next": "Weitere Events",
+  "freeEntry": "Kostenlos",
+  "from": "Ab",
+  "prices": "Mehrere Preise",
+  "dateSoon": "Datum folgt",
+  "event": "Event",
+  "unknownCity": "Ort noch offen",
+  "meetupTag": "GUTE PLÄNE BEGINNEN MIT DIR",
+  "meetupTitle": "Finde nicht nur Pläne. Mach deine eigenen.",
+  "meetupIntro": "Tennis, Wandern, Laufen, Kaffee oder etwas mit Freunden unternehmen: Erstelle kostenlos ein Meetup und lade andere ein.",
+  "steps": [
+    "Wähle eine Aktivität.",
+    "Erstelle dein Meetup.",
+    "Lade andere ein."
+  ],
+  "stepCopy": [
+    "Eine Idee reicht. Sport, Natur, Kultur oder Kaffee.",
+    "Ergänze Ort, Datum und die Details deiner Idee.",
+    "Teile dein Meetup und lade andere zum Mitmachen ein."
+  ],
+  "meetupCta": "Kostenlos ein Meetup erstellen",
+  "meetupHelp": "Öffne Evy, melde dich an und nutze die Meetup-Erstellung in der App.",
+  "activity": [
+    "Laufen",
+    "Kaffee",
+    "Wandern",
+    "Tennis"
+  ],
+  "ideaLabel": "IDEEN ZUM ERSTELLEN, KEINE AKTIVEN MEETUPS",
+  "featuresTag": "MEHR ALS EIN ABEND UNTERWEGS",
+  "featuresTitle": "Entdecken. Teilen. Wiederholen.",
+  "features": [
+    "Entdecken",
+    "Verbinden",
+    "Teilen",
+    "Organisieren"
+  ],
+  "featureCopy": [
+    "Stadt, Kategorie, Datum, Stil, Budget: Entdecke auf deine Art.",
+    "Likes, Teilnahme und Kommentare: Tausche dich zu Events aus.",
+    "Schicke ein Event an Freunde und macht den nächsten Plan.",
+    "Erstelle und verwalte deine Events und Meetups in Evy."
+  ],
+  "orgTag": "FÜR ALLE, DIE ETWAS BEWEGEN",
+  "orgTitle": "Dein Event verdient Aufmerksamkeit.",
+  "orgIntro": "Erreiche Menschen, die ihr nächstes Erlebnis suchen. Veröffentliche, verwalte und teile deine Events mit Evy.",
+  "orgBenefits": [
+    "Veröffentliche deine Events",
+    "Verwalte deine Events an einem Ort",
+    "Erreiche potenzielle Gäste",
+    "Entdecke verfügbare Werbemöglichkeiten"
+  ],
+  "orgCta": "Event veröffentlichen",
+  "orgHelp": "Öffne Evy und wechsle in den Veranstaltermodus. Zum Veröffentlichen brauchst du ein Konto.",
+  "orgPro": "Organizer Pro ist das Premium-Angebot von Evy. Die verfügbaren Optionen und Bedingungen findest du in der App.",
+  "downloadTag": "FIND YOUR VIBE",
+  "downloadTitle": "Dein nächstes Erlebnis beginnt hier.",
+  "downloadIntro": "Events, Menschen und neue Möglichkeiten. Nimm Evy mit.",
+  "scan": "Zum Download scannen",
+  "stores": "Kostenlos für iOS und Android herunterladen.",
+  "web": "Lieber im Web entdecken?",
+  "webLink": "Web-App öffnen",
+  "footerLine": "Weniger „Was machen wir?“. Mehr gemeinsame Erlebnisse.",
+  "legal": [
+    "Datenschutz",
+    "Nutzungsbedingungen",
+    "Impressum",
+    "Cookies",
+    "Community-Richtlinien",
+    "Kinderschutz",
+    "Konto löschen",
+    "Hilfe",
+    "Kontakt"
+  ],
+  "copyright": "Alle Rechte vorbehalten.",
+  "photoFallback": "Ein neues Erlebnis wartet",
+  "back": "Zur Startseite",
+  "discoveryTitle": "Finde dein nächstes Erlebnis.",
+  "discoveryIntro": "Entdecke kommende öffentliche Events ohne Konto. Tausche dich in Evy mit anderen aus.",
+  "meta": [
+    "Entdecke Events in deiner Nähe und erstelle kostenlose Meetups. Evy für iOS und Android.",
+    "Erstelle kostenlos ein Meetup mit Evy: Sport, Wandern, Kaffee und gemeinsame Erlebnisse.",
+    "Veröffentliche und verwalte Events mit Evy. Mach deine Veranstaltungen bekannt.",
+    "Lade Evy kostenlos für iOS und Android herunter. Find your vibe.",
+    "Entdecke kommende öffentliche Events mit Evy, ganz ohne Konto."
+  ],
+  "categories": {
+    "music_party": "Party / Ausgang",
+    "music_festival": "Musikfestival / Konzert",
+    "professional_fair": "Fachmesse / Messe",
+    "cultural_event": "Kulturevent",
+    "spectacle": "Show / Aufführung",
+    "other": "Sonstiges",
+    "meetups": "Meetups"
+  }
+}

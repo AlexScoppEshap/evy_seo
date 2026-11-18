@@ -121,6 +121,18 @@ test('managed gallery merges approved public slots, preserves the occurrence cov
   assert.deepEqual(calls[0].body,{p_event:base.id})
   assert.doesNotMatch(JSON.stringify(presentPublicEvent(event,origin)),/synthetic_public_signature|ik-storage|token=/)
 })
+test('revision-zero managed cover resolves from the approved gallery without exposing its source', async () => {
+  const origin = 'https://fixture.supabase.co'
+  const cover = `${origin}/functions/v1/ik-storage?action=image_public&id=${base.id}&token=synthetic_public_signature_123456&published=0`
+  const { db, calls } = backend(() => [{ key: `events/${base.id}/main.jpg`, url: cover }])
+  for (const image_url of [null, cover]) {
+    const event = await readPublicEventGallery(db, { ...base, image_url }, origin)
+    assert.equal(event.image_url, cover)
+    assert.equal(presentPublicEvent(event, origin).image_url, `https://myevy.app/events/${base.seo_slug}/media/cover`)
+    assert.doesNotMatch(JSON.stringify(presentPublicEvent(event, origin)), /synthetic_public_signature|ik-storage|token=/)
+  }
+  assert.ok(calls.every(call => call.path.endsWith('/rpc/image_event_gallery') && call.body?.p_event === base.id))
+})
 test('gallery denial is optional, private anchors never call it, and the existing cover survives', async () => {
   const {db,calls}=backend(()=>new Response('{}',{status:403,headers:{'Content-Type':'application/json'}}))
   const privateEvent={...base,is_public:false}

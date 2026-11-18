@@ -32,7 +32,7 @@ export function allowedMediaSource(value: string | null | undefined, backendOrig
     if (action === 'image_public') {
       if ([...params.keys()].some(key => !['action', 'id', 'token', 'published'].includes(key))) return undefined
       if (!new RegExp(`^${uuid}$`, 'i').test(params.get('id') ?? '') ||
-          (params.has('published') && !/^[1-9]\d*$/.test(params.get('published')!))) return undefined
+          (params.has('published') && !/^(0|[1-9]\d*)$/.test(params.get('published')!))) return undefined
       return url.href
     }
     if (action !== 'proxy' || [...params.keys()].some(key => !['action', 'bucket_kind', 'key', 'token'].includes(key))) return undefined

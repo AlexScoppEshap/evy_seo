@@ -1,0 +1,127 @@
+{
+  "nav": [
+    "Events",
+    "Meetups",
+    "Organizers",
+    "Download"
+  ],
+  "language": "Language",
+  "menu": "Menu",
+  "close": "Close",
+  "skip": "Skip to content",
+  "eyebrow": "GOOD PLANS START HERE",
+  "hero": [
+    "Your vibe.",
+    "Your people.",
+    "Your next experience."
+  ],
+  "intro": "Discover events near you, try something new and bring people together with your own Meetups.",
+  "explore": "Explore events",
+  "download": "Download Evy",
+  "free": "Free download · iOS & Android",
+  "scroll": "The next chapter is outside",
+  "appCaption": "Real app screenshot in French. Events pictured in screenshots are not a live selection.",
+  "eventsTag": "REAL EVENTS. REAL EXPERIENCES.",
+  "eventsTitle": "Your next plan is waiting.",
+  "eventsIntro": "A concert, a night out, an unexpected discovery. Find what feels like you.",
+  "allEvents": "All events",
+  "empty": "No upcoming events to show here yet. Check back soon or explore Evy.",
+  "unavailable": "Events are temporarily unavailable. You can still explore the app.",
+  "openApp": "Open Evy",
+  "previous": "Previous events",
+  "next": "Next events",
+  "freeEntry": "Free",
+  "from": "From",
+  "prices": "Multiple prices",
+  "dateSoon": "Date to be announced",
+  "event": "Event",
+  "unknownCity": "Location to discover",
+  "meetupTag": "GREAT PLANS START WITH YOU",
+  "meetupTitle": "Don’t just find plans. Make them.",
+  "meetupIntro": "Tennis, hiking, running, coffee or a day out with friends: create a Meetup for free and invite others to share the experience.",
+  "steps": [
+    "Pick an activity.",
+    "Create your Meetup.",
+    "Invite others along."
+  ],
+  "stepCopy": [
+    "Start with an idea. Sport, nature, culture or coffee.",
+    "Add a place, a date and the details of your plan.",
+    "Share your Meetup and invite others to join you."
+  ],
+  "meetupCta": "Create a Meetup for free",
+  "meetupHelp": "Open Evy, sign in, then use Meetup creation inside the app.",
+  "activity": [
+    "Running",
+    "Coffee",
+    "Hiking",
+    "Tennis"
+  ],
+  "ideaLabel": "IDEAS TO CREATE, NOT ACTIVE MEETUPS",
+  "featuresTag": "MORE THAN A NIGHT OUT",
+  "featuresTitle": "Discover. Share. Do it again.",
+  "features": [
+    "Discover",
+    "Connect",
+    "Share",
+    "Organize"
+  ],
+  "featureCopy": [
+    "City, category, date, style, budget: explore your way.",
+    "Likes, participation and comments: connect around events.",
+    "Send an event to your friends and start your next plan.",
+    "Create and manage your events and Meetups in Evy."
+  ],
+  "orgTag": "FOR THE PEOPLE WHO MAKE IT HAPPEN",
+  "orgTitle": "Your event deserves to be discovered.",
+  "orgIntro": "Reach people looking for their next experience. Publish, manage and share your events with Evy.",
+  "orgBenefits": [
+    "Publish your events",
+    "Manage your events in one place",
+    "Reach potential attendees",
+    "Explore available promotional tools"
+  ],
+  "orgCta": "Publish an event",
+  "orgHelp": "Open Evy and enter organizer mode. You’ll need an account to publish.",
+  "orgPro": "Organizer Pro is Evy’s premium offering. See the available options and terms in the app.",
+  "downloadTag": "FIND YOUR VIBE",
+  "downloadTitle": "Your next experience starts here.",
+  "downloadIntro": "The events, the people, the possibilities. Take Evy with you.",
+  "scan": "Scan to download",
+  "stores": "Download free on iOS and Android.",
+  "web": "Prefer to explore on the web?",
+  "webLink": "Open the web app",
+  "footerLine": "Less “what shall we do?”. More moments worth sharing.",
+  "legal": [
+    "Privacy",
+    "Terms of use",
+    "Legal notice",
+    "Cookies",
+    "Community guidelines",
+    "Child safety",
+    "Delete my account",
+    "Support",
+    "Contact"
+  ],
+  "copyright": "All rights reserved.",
+  "photoFallback": "A new experience awaits",
+  "back": "Back to home",
+  "discoveryTitle": "Find your next experience.",
+  "discoveryIntro": "Explore upcoming public events without an account. Join the conversation in Evy.",
+  "meta": [
+    "Discover events near you and create free Meetups. Get Evy on iOS and Android.",
+    "Create a free Meetup with Evy: sport, hiking, coffee and experiences to share.",
+    "Publish and manage events with Evy. Help people discover your next experience.",
+    "Download Evy for free on iOS and Android. Find your vibe.",
+    "Explore upcoming public events with Evy. No account needed."
+  ],
+  "categories": {
+    "music_party": "Music party / Night out",
+    "music_festival": "Music festival / concert",
+    "professional_fair": "Professional fair / Trade show",
+    "cultural_event": "Cultural event",
+    "spectacle": "Show / Performance",
+    "other": "Other",
+    "meetups": "Meetups"
+  }
+}

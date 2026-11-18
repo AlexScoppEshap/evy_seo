@@ -1,31 +1,62 @@
-import assert from 'node:assert/strict'
-import test from 'node:test'
-import { readFileSync } from 'node:fs'
-import { createRequire } from 'node:module'
-import ts from 'typescript'
-import { renderToStaticMarkup } from 'react-dom/server'
-import type { ReactNode } from 'react'
-import { PUBLIC_ORIGIN } from './event-seo.ts'
-
-const require = createRequire(import.meta.url)
-const compiled = ts.transpileModule(readFileSync(new URL('../app/page.tsx', import.meta.url), 'utf8'), {
-  compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
-}).outputText
-const exports: { default?: () => ReactNode; metadata?: { robots: unknown; alternates: unknown; title: string } } = {}
-new Function('require', 'exports', compiled)((id: string) => {
-  if (id === '@/lib/event-seo') return { PUBLIC_ORIGIN }
-  if (id.includes('supabase')) throw new Error('Root attempted a database dependency')
-  return require(id)
-}, exports)
-
-test('root is safe public product navigation with no event/data dependency', () => {
-  const html = renderToStaticMarkup(exports.default!())
-  assert.match(html, /<h1[^>]*>Evy<\/h1>/)
-  assert.match(html, /href="https:\/\/myevy.app"/)
-  assert.doesNotMatch(html, /<pre|SEO test|SUPABASE|postgres|token|diagnostic|project|localhost|Friday live/i)
-})
-test('root metadata is non-indexed and follows the WordPress canonical homepage without a redirect', () => {
-  assert.equal(exports.metadata!.title, 'Evy')
-  assert.deepEqual(exports.metadata!.robots, { index: false, follow: true })
-  assert.deepEqual(exports.metadata!.alternates, { canonical: `${PUBLIC_ORIGIN}/` })
-})
+import assert from "node:assert/strict";
+import test from "node:test";
+import { readFileSync } from "node:fs";
+import { marketingMetadata } from "./marketing-metadata.ts";
+import {
+  locales,
+  pageKeys,
+  marketingPath,
+  isLocale,
+  isMarketingPage,
+} from "./i18n/config.ts";
+const dictionary = (locale: string) =>
+  JSON.parse(
+    readFileSync(
+      new URL(`../content/i18n/${locale}.json`, import.meta.url),
+      "utf8",
+    ),
+  );
+test("five languages have complete matching dictionaries and unique canonical marketing routes", () => {
+  const fr = dictionary("fr"),
+    urls = new Set<string>();
+  for (const locale of locales) {
+    const d = dictionary(locale);
+    assert.deepEqual(Object.keys(d).sort(), Object.keys(fr).sort());
+    for (const key of Object.keys(fr)) {
+      if (Array.isArray(fr[key])) assert.equal(d[key].length, fr[key].length);
+      assert.ok(d[key]);
+    }
+    for (const page of pageKeys) {
+      const url = marketingPath(locale, page);
+      assert.ok(!urls.has(url));
+      urls.add(url);
+      const m = marketingMetadata(locale, page, d);
+      assert.equal(m.alternates?.canonical, `https://myevy.app${url}`);
+      assert.equal(Object.keys(m.alternates!.languages!).length, 6);
+      assert.equal(
+        m.alternates!.languages!["x-default"],
+        `https://myevy.app${marketingPath("fr", page)}`,
+      );
+      for (const l of locales)
+        assert.equal(
+          m.alternates!.languages![l],
+          `https://myevy.app${marketingPath(l, page)}`,
+        );
+      assert.deepEqual(m.robots, { index: false, follow: true });
+    }
+  }
+  assert.equal(urls.size, 25);
+  assert.equal(marketingPath("fr"), "/");
+  assert.equal(isLocale("xx"), false);
+  assert.equal(isMarketingPage("an-event-slug"), false);
+});
+test("marketing analytics identifiers do not install tracking or read browser storage", () => {
+  const source = readFileSync(
+    new URL("./marketing-analytics.ts", import.meta.url),
+    "utf8",
+  );
+  assert.doesNotMatch(
+    source,
+    /fetch\(|localStorage|document\.cookie|sendBeacon|fbq\(/,
+  );
+});

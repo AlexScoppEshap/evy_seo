@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.eshap.evy",
+      "sha256_cert_fingerprints": [
+        "BE:A6:36:3F:A9:CC:07:B9:FA:BE:47:94:B7:87:09:D7:B3:E6:44:D8:97:8E:7B:62:1A:EF:5B:22:DB:E8:CF:94",
+        "44:EC:64:A2:2E:30:59:90:19:E7:AE:52:76:10:E4:DF:36:71:5D:2A:7E:86:5A:A5:75:0B:57:70:00:4A:E1:E4",
+        "A4:1D:43:3A:95:B0:95:D9:D2:20:84:04:5A:C5:41:91:7F:E0:D7:1D:86:A9:65:AF:2A:C5:A6:59:1B:7A:BE:59"
+      ]
+    }
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "key": "MAPTILER_API_KEY",
+    "target": [
+      "production"
+    ],
+    "type": "sensitive"
+  },
+  {
+    "key": "NEXT_PUBLIC_SUPABASE_URL",
+    "target": [
+      "production",
+      "preview"
+    ],
+    "type": "sensitive"
+  },
+  {
+    "key": "NEXT_PUBLIC_SUPABASE_ANON_KEY",
+    "target": [
+      "production",
+      "preview"
+    ],
+    "type": "sensitive"
+  }
+]

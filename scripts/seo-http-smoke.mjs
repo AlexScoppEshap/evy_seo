@@ -123,7 +123,7 @@ const fixture = createServer((req, res) => {
 fixture.listen(0, '127.0.0.1')
 await once(fixture, 'listening')
 const fixturePort = fixture.address().port
-rows[0].image_url = `http://127.0.0.1:${fixturePort}/functions/v1/ik-storage?action=image_public&id=${base.id}&token=synthetic_public_signature_123456&published=1`
+rows[0].image_url = `http://127.0.0.1:${fixturePort}/functions/v1/ik-storage?action=image_public&id=${base.id}&token=synthetic_public_signature_123456&published=0`
 rows[0].gallery_image_urls = [rows[0].image_url]
 const reserve = createServer()
 reserve.listen(0, '127.0.0.1'); await once(reserve, 'listening')
@@ -156,9 +156,9 @@ try {
       check(()=>assert.equal(root.headers.get('x-powered-by'),null))
       check(()=>assert.match(root.headers.get('content-type'),/text\/html/))
       check(()=>assert.doesNotMatch(rootBody + JSON.stringify([...root.headers]),forbiddenOutput))
-      check(()=>assert.equal(calls.length,before))
+      check(()=>assert.ok(calls.length-before <= 1, 'Homepage performs at most one bounded public event query'))
       if (method === 'GET') {
-        check(()=>assert.match(rootBody,/<h1[^>]*>Evy<\/h1>/))
+        check(()=>assert.match(rootBody,/<h1[^>]*><span>Ta vibe\.<\/span>/))
         check(()=>assert.match(rootBody,/<meta name="robots" content="noindex, follow"/))
         check(()=>assert.match(rootBody,/rel="canonical" href="https:\/\/myevy.app\/"/))
       } else check(()=>assert.equal(rootBody,''))
@@ -223,6 +223,23 @@ try {
     }
     Object.assign(rows[0],{is_public:true,recurrence_state:'active',status:'scheduled',previous_start_at:null,ai_moderation_status:'approved',users:base.users})
   }
+  const revisionZeroCover = rows[0].image_url
+  for (const [suffix, expected] of [
+    ['&published=0',200], ['&published=2',200], ['',200],
+    ['&published=-1',404], ['&published=1.5',404], ['&published=',404],
+    ['&published=0&published=1',404], ['&published=0&published=0',404],
+  ]) {
+    rows[0].image_url = revisionZeroCover.replace('&published=0', suffix)
+    rows[0].gallery_image_urls = [rows[0].image_url]
+    const before = imageFetches
+    const response = await fetch(`${origin}/events/scheduled/media/cover`)
+    check(()=>assert.equal(response.status,expected))
+    check(()=>assert.equal(response.headers.get('cache-control'),'private, no-store'))
+    check(()=>assert.equal(imageFetches-before,expected===200?1:0))
+    await response.arrayBuffer()
+  }
+  rows[0].image_url = revisionZeroCover
+  rows[0].gallery_image_urls = [revisionZeroCover]
   // The same stable public media URL must revoke on the next request, independent
   // of viewer cookies, RSC, the old upstream cache or source signed URL lifetime.
   for (const [patch, expected] of [[{},200],[{is_public:false},404],[{ai_moderation_status:'rejected'},404],[{users:{...base.users,account_status:'pending_deletion'}},404]]) {
@@ -339,9 +356,10 @@ try {
   for(const mode of ['outage','nested']){
     wordPressMode=mode;const failedRoot=await fetch(`${origin}/sitemap.xml`)
     const failedRootBody=await failedRoot.text()
-    check(()=>assert.equal(failedRoot.status,503));check(()=>assert.doesNotMatch(failedRootBody,/PRIVATE_WORDPRESS_DIAGNOSTIC|partition=00/))
+    check(()=>assert.equal(failedRoot.status,200));check(()=>assert.equal(failedRootBody,mergedXml));check(()=>assert.doesNotMatch(failedRootBody,/PRIVATE_WORDPRESS_DIAGNOSTIC/))
   }
   wordPressMode='normal'
+  check(()=>assert.equal(calls.some(url=>url.pathname==='/sitemap_index.xml'),false))
   const clientFiles = readdirSync('.next/static', { recursive: true }).filter(name => String(name).endsWith('.js'))
   const forbiddenClientFiles = clientFiles.filter(name => /SUPABASE_SERVICE_ROLE_KEY|service_role|ik-storage|private-token|private-object|synthetic_map_key/.test(readFileSync(`.next/static/${name}`, 'utf8')))
   check(()=>assert.equal(forbiddenClientFiles.length,0))

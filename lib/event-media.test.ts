@@ -10,8 +10,29 @@ const token = 'synthetic_public_signature_123456'
 const source = `${backend}/functions/v1/ik-storage?action=proxy&bucket_kind=event&key=events/${base.id}/cover.jpg&token=${token}`
 const managed = `${backend}/functions/v1/ik-storage?action=image_public&id=${base.id}&token=${token}&published=2`
 
+test('managed media accepts zero, positive and absent revisions; rejects malformed or duplicate revisions', async () => {
+  const withoutRevision = managed.replace('&published=2', '')
+  for (const [suffix, accepted] of [
+    ['&published=0', true], ['&published=1', true], ['&published=42', true], ['', true],
+    ['&published=-1', false], ['&published=1.5', false], ['&published=', false],
+    ['&published=0&published=1', false], ['&published=0&published=0', false],
+    ['&published=01', false], ['&published=abc', false],
+  ] as const) {
+    const image_url = withoutRevision + suffix
+    assert.equal(allowedMediaSource(image_url, backend, base, 'cover'), accepted ? image_url : undefined)
+    let calls = 0
+    const response = await fetchEventMedia({ ...base, image_url }, 'cover', backend, async () => {
+      calls++
+      return new Response(new Uint8Array([255,216,255,217]), { headers: { 'Content-Type': 'image/jpeg' } })
+    })
+    assert.equal(response.status, accepted ? 200 : 404)
+    assert.equal(calls, accepted ? 1 : 0)
+    assert.equal(response.headers.get('cache-control'), 'private, no-store')
+  }
+})
+
 test('legacy and moderated covers enter metadata via token-free canonical media routes only', () => {
-  for (const image_url of [source, managed, `${backend}/storage/v1/object/public/events/a.jpg`]) {
+  for (const image_url of [source, managed, managed.replace('published=2', 'published=0'), `${backend}/storage/v1/object/public/events/a.jpg`]) {
     const event = presentPublicEvent({ ...base, image_url, gallery_image_urls: [image_url] }, backend)
     assert.equal(event.image_url, `https://myevy.app/events/${base.seo_slug}/media/cover`)
     const serialized = JSON.stringify({ event, metadata: buildEventMetadata(event), json: buildEventJsonLd(event) })
