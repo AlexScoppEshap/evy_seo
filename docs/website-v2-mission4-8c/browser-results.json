@@ -1,0 +1,32 @@
+{
+  "reducedMotion": {
+    "result": "PASS",
+    "mouseDrag": true,
+    "dragClickSuppressed": true,
+    "ordinaryClick": true,
+    "keyboard": true,
+    "reducedMotion": true,
+    "touchScroll": true,
+    "citySwitch": true,
+    "requestRace": true,
+    "emptyAndError": true,
+    "languages": 5,
+    "mobileWidth": 390,
+    "scrollDataRequests": 0
+  },
+  "normalMotion": {
+    "result": "PASS",
+    "mouseDrag": true,
+    "dragClickSuppressed": true,
+    "ordinaryClick": true,
+    "keyboard": true,
+    "reducedMotion": true,
+    "touchScroll": true,
+    "citySwitch": true,
+    "requestRace": true,
+    "emptyAndError": true,
+    "languages": 5,
+    "mobileWidth": 390,
+    "scrollDataRequests": 0
+  }
+}

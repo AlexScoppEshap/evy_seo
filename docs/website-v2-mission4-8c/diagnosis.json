@@ -1,0 +1,200 @@
+[
+  {
+    "motion": "reduce",
+    "trial": 0,
+    "first": 656,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 2392.1000000089407,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 2645.7000000029802,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 2646.7000000029802,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 2646.9000000059605,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 2647,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "scrollTo",
+        "time": 2653,
+        "left": 0,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 656,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 4153.20000000298,
+        "left": 656,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "reduce",
+    "trial": 1,
+    "first": 656,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 1515.800000011921,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 1752.2000000029802,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 1752.7000000029802,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 1752.800000011921,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 1753,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "scrollTo",
+        "time": 1763.4000000059605,
+        "left": 0,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 656,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 3255.7000000029802,
+        "left": 656,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "reduce",
+    "trial": 2,
+    "first": 656,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 1518.9000000059605,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 1756.4000000059605,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 1757.1000000089407,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 1757.2000000029802,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 1757.4000000059605,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "scrollTo",
+        "time": 1765.9000000059605,
+        "left": 0,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 656,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 3259.800000011921,
+        "left": 656,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  }
+]

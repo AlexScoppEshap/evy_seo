@@ -1,0 +1,59 @@
+[
+  {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "location": null,
+    "contentType": "application/xml; charset=utf-8",
+    "locs": 257,
+    "previewURLs": false,
+    "xml": true
+  },
+  {
+    "path": "/events-sitemap.xml",
+    "status": 200,
+    "location": null,
+    "contentType": "application/xml; charset=utf-8",
+    "locs": 256,
+    "previewURLs": false,
+    "xml": true
+  },
+  {
+    "path": "/sitemap_index.xml",
+    "status": 301,
+    "location": "/sitemap.xml",
+    "contentType": null,
+    "locs": 0,
+    "previewURLs": false,
+    "xml": false
+  },
+  {
+    "path": "/page-sitemap.xml",
+    "status": 200,
+    "location": null,
+    "contentType": "application/xml; charset=utf-8",
+    "locs": 0,
+    "previewURLs": false,
+    "xml": true
+  },
+  {
+    "path": "/wp-sitemap.xml",
+    "status": 301,
+    "location": "/sitemap.xml",
+    "contentType": null,
+    "locs": 0,
+    "previewURLs": false,
+    "xml": false
+  },
+  {
+    "path": "/events-sitemap.xml?partition=00",
+    "status": 200,
+    "xml": true,
+    "previewURLs": false
+  },
+  {
+    "path": "/events-sitemap.xml?partition=ff",
+    "status": 200,
+    "xml": true,
+    "previewURLs": false
+  }
+]

@@ -1,0 +1,342 @@
+{
+  "deployment": {
+    "id": "dpl_6M7j37MbWJaYtPx8m3QHkzLx1nTD",
+    "url": "evy-e2rx8wnxi-evy7.vercel.app",
+    "sha": "56e81f2043b41de489a1dc6160e9b17c19bc822f",
+    "environment": "Preview",
+    "state": "READY",
+    "aliases": [
+      "evy-seo-git-feature-website-v2-evy7.vercel.app"
+    ],
+    "productionUnchanged": true
+  },
+  "marketing": [
+    {
+      "path": "/",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/meetups",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/organizers",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/download/",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 2
+    },
+    {
+      "path": "/events",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/en",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/en/meetups",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/en/organizers",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/en/download",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 2
+    },
+    {
+      "path": "/en/events",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/de",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/de/meetups",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/de/organizers",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/de/download",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 2
+    },
+    {
+      "path": "/de/events",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/it",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/it/meetups",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/it/organizers",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/it/download",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 2
+    },
+    {
+      "path": "/it/events",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/es",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/es/meetups",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/es/organizers",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    },
+    {
+      "path": "/es/download",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 2
+    },
+    {
+      "path": "/es/events",
+      "status": 200,
+      "metadata": true,
+      "canonical": true,
+      "hreflang": true,
+      "noindex": true,
+      "mobileApplication": 0
+    }
+  ],
+  "legal": [
+    {
+      "slug": "privacy",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "terms",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "legal",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "cookies",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "community-guidelines",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "child-safety",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "support",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "contact-us",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    },
+    {
+      "slug": "account-deletion",
+      "status": 200,
+      "exactContent": true,
+      "canonical": true
+    }
+  ],
+  "cities": [
+    {
+      "city": "ch-geneve",
+      "count": 12,
+      "uniqueNames": true
+    },
+    {
+      "city": "ch-neuchatel",
+      "count": 12,
+      "uniqueNames": true
+    },
+    {
+      "city": "ch-zurich",
+      "count": 12,
+      "uniqueNames": true
+    },
+    {
+      "city": "ch-lausanne",
+      "count": 12,
+      "uniqueNames": true
+    }
+  ],
+  "events": [
+    {
+      "path": "/events/jeudi-oui-neuchatel-neuchatel-ch-2026-e3ad19",
+      "status": 200,
+      "unverifiedOrganizerOmitted": true
+    },
+    {
+      "path": "/events/english-stand-up-comedy-odd-wednesday-open-mic-lausanne-ch-2026-ebd910",
+      "status": 200,
+      "organizerCorrect": true,
+      "claimPreserved": true,
+      "mediaStatus": 200,
+      "mediaPrivateNoStore": true
+    }
+  ],
+  "browser": {
+    "mouseDrag": true,
+    "dragClickSuppressed": true,
+    "keyboard": "Known race; corrected locally only",
+    "squareCovers": true,
+    "counterHidden": true
+  },
+  "robotsDisallow": true,
+  "result": "PASS"
+}

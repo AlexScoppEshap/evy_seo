@@ -1,0 +1,326 @@
+[
+  {
+    "motion": "reduce",
+    "trial": 0,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 657.4000000059605,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 894.2999999970198,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 895,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 895.2000000029802,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 895.2999999970198,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2399.9000000059605,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "reduce",
+    "trial": 1,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 640.7000000029802,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 878.4000000059605,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 879.0999999940395,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 879.2000000029802,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 879.4000000059605,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2382.0999999940395,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "reduce",
+    "trial": 2,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 640.2999999970198,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 878.1000000089407,
+        "left": 656,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 878.7999999970198,
+        "left": 656,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 878.9000000059605,
+        "left": 656,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 879.1000000089407,
+        "left": 656,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "instant"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2383.2000000029802,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "no-preference",
+    "trial": 0,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 698.5999999940395,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 933.9000000059605,
+        "left": 642,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 934.4000000059605,
+        "left": 642,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 934.5,
+        "left": 642,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 934.5999999940395,
+        "left": 642,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "smooth"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2438.5,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "no-preference",
+    "trial": 1,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 605.7999999970198,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 841.7000000029802,
+        "left": 642,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 842.1000000089407,
+        "left": 642,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 842.2000000029802,
+        "left": 642,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 842.4000000059605,
+        "left": 642,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "smooth"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2344.4000000059605,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "motion": "no-preference",
+    "trial": 2,
+    "first": 0,
+    "second": 0,
+    "trace": [
+      {
+        "kind": "before",
+        "time": 807.5,
+        "left": 0,
+        "focus": ""
+      },
+      {
+        "kind": "beforeHome",
+        "time": 1042.2999999970198,
+        "left": 642,
+        "focus": "event-track"
+      },
+      {
+        "kind": "keydown",
+        "time": 1042.7000000029802,
+        "left": 642,
+        "focus": "event-track",
+        "key": "Home",
+        "target": "event-track"
+      },
+      {
+        "kind": "handled",
+        "time": 1042.7000000029802,
+        "left": 642,
+        "focus": "event-track",
+        "prevented": false
+      },
+      {
+        "kind": "scrollTo",
+        "time": 1042.9000000059605,
+        "left": 642,
+        "focus": "event-track",
+        "args": [
+          {
+            "left": 0,
+            "behavior": "smooth"
+          }
+        ]
+      },
+      {
+        "kind": "afterHome",
+        "time": 2546.5,
+        "left": 0,
+        "focus": "event-track"
+      }
+    ],
+    "errors": []
+  }
+]

@@ -28,8 +28,24 @@ try {
  await track.focus();await page.keyboard.press('Home');await page.waitForFunction(()=>document.querySelector('.event-track').scrollLeft<2);
  await page.keyboard.press('ArrowRight');await page.waitForFunction(()=>document.querySelector('.event-track').scrollLeft>100);
  await page.keyboard.press('End');await page.waitForFunction(()=>{const e=document.querySelector('.event-track');return e.scrollLeft>=e.scrollWidth-e.clientWidth-2;});
+ const endLeft=await track.evaluate(e=>e.scrollLeft);await page.keyboard.press('ArrowLeft');await page.waitForFunction(end=>document.querySelector('.event-track').scrollLeft<end-100,endLeft);
  await page.keyboard.press('Home');await page.keyboard.press('Tab');assert.ok(await page.evaluate(()=>document.activeElement.classList.contains('event-card')));
  assert.equal(await track.evaluate(e=>getComputedStyle(e).scrollBehavior),'auto');
+ // Hold the end-of-drag animation frame so Home must supersede it deterministically.
+ await track.scrollIntoViewIfNeeded();const raceBox=await track.boundingBox();
+ await page.mouse.move(raceBox.x+raceBox.width*.75,raceBox.y+100);await page.mouse.down();
+ await page.mouse.move(raceBox.x+raceBox.width*.2,raceBox.y+100,{steps:12});
+ await page.evaluate(()=>{
+   const request=window.requestAnimationFrame,cancel=window.cancelAnimationFrame;const pending=new Map();let id=1000000;
+   window.requestAnimationFrame=cb=>{pending.set(++id,cb);return id;};
+   window.cancelAnimationFrame=id=>{if(!pending.delete(id))cancel.call(window,id);};
+   window.pendingSnapCount=()=>pending.size;
+   window.finishSnapRace=()=>{const count=pending.size;window.requestAnimationFrame=request;window.cancelAnimationFrame=cancel;for(const cb of pending.values())cb(performance.now());return count;};
+ });
+ await page.mouse.up();assert.equal(await page.evaluate(()=>window.pendingSnapCount()),1,'drag schedules one snap');await track.focus();await page.keyboard.press('Home');
+ assert.equal(await page.evaluate(()=>window.finishSnapRace()),0,'Home cancels pending drag snap');
+ await page.waitForFunction(()=>document.querySelector('.event-track').scrollLeft<2);
+
  // A fresh ordinary click remains a link after the suppressed drag click.
  let clicked=false;await page.route('https://myevy.app/events/fixture-*',async r=>{clicked=true;await r.fulfill({body:'ordinary link navigation'});});
  await page.locator('.event-card').first().click();assert.ok(clicked);
@@ -53,6 +69,10 @@ try {
  for(let x=320;x>=60;x-=20)await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x,y}]});
  await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
  await touchPage.waitForFunction(start=>document.querySelector('.event-track').scrollLeft>start+50,initial);
+ await touchTrack.focus();await touchPage.keyboard.press('Home');await touchPage.waitForFunction(()=>document.querySelector('.event-track').scrollLeft<2);
+ await touchPage.keyboard.press('ArrowRight');await touchPage.waitForFunction(()=>document.querySelector('.event-track').scrollLeft>50);
+ await touchPage.keyboard.press('End');await touchPage.waitForFunction(()=>{const e=document.querySelector('.event-track');return e.scrollLeft>=e.scrollWidth-e.clientWidth-2;});
+ await touchPage.keyboard.press('Home');await touchPage.keyboard.press('Tab');assert.ok(await touchPage.evaluate(()=>document.activeElement.classList.contains('event-card')));
  await mobile.close();
  console.log(JSON.stringify({result:'PASS',mouseDrag:true,dragClickSuppressed:true,ordinaryClick:true,keyboard:true,reducedMotion:true,touchScroll:true,citySwitch:true,requestRace:true,emptyAndError:true,languages:5,mobileWidth:390,scrollDataRequests:0},null,2));
 }finally{await browser.close();}
