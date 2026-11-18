@@ -151,12 +151,18 @@ try {
       const before = calls.length
       const root = await fetch(origin, { method, headers: { 'User-Agent': agent, cookie: 'debug=1', authorization: 'Bearer pretend-viewer-token' } })
       const rootBody = await root.text()
+      // HEAD ends before the streamed SSR work finishes; include its fixture reads
+      // in this request's budget rather than the following GET's budget.
+      if (method === 'HEAD') await new Promise(resolve=>setTimeout(resolve,100))
       check(()=>assert.equal(root.status,200))
       check(()=>assert.equal(root.headers.get('location'),null))
       check(()=>assert.equal(root.headers.get('x-powered-by'),null))
       check(()=>assert.match(root.headers.get('content-type'),/text\/html/))
       check(()=>assert.doesNotMatch(rootBody + JSON.stringify([...root.headers]),forbiddenOutput))
-      check(()=>assert.ok(calls.length-before <= 1, 'Homepage performs at most one bounded public event query'))
+      check(()=>assert.ok(calls.length-before <= 5, 'Homepage caps four availability probes plus one selected-city query'))
+      const homepageCalls=calls.slice(before)
+      check(()=>assert.ok(homepageCalls.every(url=>url.pathname==='/rest/v1/events'&&url.searchParams.get('limit')==='12')))
+      check(()=>assert.ok(homepageCalls.filter(url=>url.searchParams.get('select')?.includes('description')).length<=1))
       if (method === 'GET') {
         check(()=>assert.match(rootBody,/<h1[^>]*><span>Ta vibe\.<\/span>/))
         check(()=>assert.match(rootBody,/<meta name="robots" content="noindex, follow"/))
@@ -360,6 +366,14 @@ try {
   }
   wordPressMode='normal'
   check(()=>assert.equal(calls.some(url=>url.pathname==='/sitemap_index.xml'),false))
+  for(const query of ['city=unknown','city=ch-lausanne&city=ch-geneve','city=ch-lausanne&extra=1','city=ch-lausanne%2Cor%28is_public.eq.false%29']) {
+    const response=await fetch(`${origin}/api/marketing/events?${query}`);check(()=>assert.equal(response.status,400));
+  }
+  const cityResponse=await fetch(`${origin}/api/marketing/events?city=ch-lausanne`);
+  check(()=>assert.equal(cityResponse.status,200));check(()=>assert.equal(cityResponse.headers.get('cache-control'),'private, no-store'));
+  const cityBody=await cityResponse.text();check(()=>assert.doesNotMatch(cityBody,/private-token|ik-storage|creator_id|description/));
+  const foreignCity=await fetch(`${origin}/api/marketing/events?city=ch-geneve`);
+  const foreignCityData=await foreignCity.json();check(()=>assert.deepEqual(foreignCityData.events,[]));
   const clientFiles = readdirSync('.next/static', { recursive: true }).filter(name => String(name).endsWith('.js'))
   const forbiddenClientFiles = clientFiles.filter(name => /SUPABASE_SERVICE_ROLE_KEY|service_role|ik-storage|private-token|private-object|synthetic_map_key/.test(readFileSync(`.next/static/${name}`, 'utf8')))
   check(()=>assert.equal(forbiddenClientFiles.length,0))

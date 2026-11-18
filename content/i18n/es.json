@@ -123,5 +123,8 @@
     "spectacle": "Espectáculo / Actuación",
     "other": "Otro",
     "meetups": "Meetups"
-  }
+  },
+  "cityPicker": "Elige una ciudad",
+  "cityLoading": "Cargando eventos…",
+  "cityResults": "eventos"
 }
